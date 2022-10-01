@@ -32,6 +32,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_released("shoot"):
 		disconnect_hook()
+		
 	move(delta)
 
 #calculates each individual force applied to the player, then adds them together
@@ -60,19 +61,29 @@ func move(delta):
 	#actually moves the player
 	velocity = move_and_slide(new_velocity, Vector2.UP)
 
+#Shoots a grappling hook projectile and connects it to the player
 func shoot_hook(direction):
+	#make the object
 	var grapple = Grapple.instance()
+	#connect functions for when projectile connects to a surface
 	grapple.connect("connect", self, "connect_hook")
+	#set projectiles position and velocity
 	grapple.set_velocity(direction.normalized() * GRAPPLE_SHOT_SPEED)
 	grapple.set_position(position)
+	#place projectile in the world
 	get_parent().add_child(grapple)
+	#let player know the current hook
 	current_hook = grapple
 
+#Lets player know the current hook is connected to a surface
 func connect_hook():
 	hook_connected = true
 
+#Disconnects the current hook
 func disconnect_hook():
+	#tells player that no hook is connected
 	hook_connected = false
+	#deletes the old hook
 	if current_hook != null:
 		current_hook.queue_free()
 		current_hook = null
