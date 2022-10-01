@@ -51,7 +51,7 @@ func move(delta):
 	#Force from grapple hook
 	var grapple_value
 	if hook_connected:
-		grapple_value = (current_hook.position - position) / 3
+		grapple_value = (current_hook.position - position).normalized() * 75
 	else:
 		grapple_value = Vector2.ZERO
 	
