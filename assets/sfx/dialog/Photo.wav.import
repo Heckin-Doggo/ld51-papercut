@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Test.wav-994906f0ec2cee4708a4519caca9faef.sample"
+path="res://.import/Photo.wav-7bc338b91b1670ca7eef52825c7c5966.sample"
 
 [deps]
 
-source_file="res://assets/sfx/dialog/Test.wav"
-dest_files=[ "res://.import/Test.wav-994906f0ec2cee4708a4519caca9faef.sample" ]
+source_file="res://assets/sfx/dialog/Photo.wav"
+dest_files=[ "res://.import/Photo.wav-7bc338b91b1670ca7eef52825c7c5966.sample" ]
 
 [params]
 

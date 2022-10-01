@@ -29,3 +29,9 @@ func _process(_delta):
 		dialogInst.dialogPath = "res://dialog/dialogTest2.json"
 		$CanvasLayer.add_child(dialogInst)
 		enabled = false
+	if Input.is_action_just_pressed("ui_up") and not enabled:
+		enabled = true
+		var dialogInst = dialogBox.instance()
+		dialogInst.dialogPath = "res://dialog/dialogTest3.json"
+		$CanvasLayer.add_child(dialogInst)
+		enabled = false
