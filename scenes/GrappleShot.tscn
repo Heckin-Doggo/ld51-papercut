@@ -27,3 +27,5 @@ shape = SubResource( 2 )
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.140625, 0.140625 )
 texture = ExtResource( 2 )
+
+[node name="Line2D" type="Line2D" parent="."]
