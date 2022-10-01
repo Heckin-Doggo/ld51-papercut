@@ -1,0 +1,7 @@
+[
+    {"Name": "Test", "Text": "Oh wow, I'm speaking dialog stuff!", "Image": "1"},
+    {"Name": "Test", "Text": "I wonder if I can insert \n newlines.", "Image": "3"},
+    {"Name": "Test", "Text": "Word Wraping AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Image": "2"},
+    {"Name": "Test", "Text": "invalid image", "Image": "4"},
+    {"Name": "Bingus", "Text": "I am bingus", "Image": "Happy"}
+]

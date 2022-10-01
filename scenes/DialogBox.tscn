@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://menu/Marker.tres" type="Theme" id=1]
 [ext_resource path="res://assets/art/dialog/Border.png" type="Texture" id=2]
 [ext_resource path="res://assets/art/dialog/TextBox.png" type="Texture" id=3]
-[ext_resource path="res://assets/art/dialog/PortraitTest1.png" type="Texture" id=4]
+[ext_resource path="res://assets/art/portraits/Test1.png" type="Texture" id=4]
+[ext_resource path="res://scenes/DialogBox.gd" type="Script" id=5]
+[ext_resource path="res://assets/sfx/dialog/test.wav" type="AudioStream" id=6]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Bob"
@@ -26,6 +28,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -3.0
 margin_bottom = -479.0
+script = ExtResource( 5 )
 
 [node name="Picture" type="TextureRect" parent="."]
 margin_left = 75.0
@@ -61,21 +64,27 @@ margin_bottom = 193.0
 texture = ExtResource( 3 )
 expand = true
 
-[node name="Dialog" type="Label" parent="TextBackground"]
+[node name="Dialog" type="RichTextLabel" parent="TextBackground"]
 margin_left = 27.0
 margin_top = 19.0
 margin_right = 690.0
 margin_bottom = 148.0
 theme = ExtResource( 1 )
+custom_colors/default_color = Color( 0.117647, 0.0823529, 0.00784314, 1 )
 text = "ohoho I'm gonna say some funny text.
 Maybe even on 2 lines.
 Or three.
 "
 
 [node name="Indicator" type="Polygon2D" parent="."]
-position = Vector2( 544, -93.6112 )
+position = Vector2( 544, -90 )
 color = Color( 0.141176, 0.0862745, 0.0117647, 1 )
 polygon = PoolVector2Array( 431, 222, 456, 222, 443, 240 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Indicator"]
 anims/Bob = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="DialogTick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
