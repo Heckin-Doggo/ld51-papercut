@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ReducedBassJazz.mp3-faeae01521d8fa53b541e3e86e41bcf6.mp3str"
+
+[deps]
+
+source_file="res://assets/music/ReducedBassJazz.mp3"
+dest_files=[ "res://.import/ReducedBassJazz.mp3-faeae01521d8fa53b541e3e86e41bcf6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

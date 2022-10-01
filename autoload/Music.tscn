@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/music/ReducedBassJazz.mp3" type="AudioStream" id=1]
+[ext_resource path="res://autoload/Music.gd" type="Script" id=2]
+
+[node name="Music" type="Node"]
+script = ExtResource( 2 )
+
+[node name="Jazz" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )

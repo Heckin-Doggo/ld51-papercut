@@ -31,6 +31,7 @@ func _ready():
 
 # input
 func _process(_delta):
+	$Indicator.visible = finished
 	if Input.is_action_just_pressed("ui_accept"):
 		if finished:
 			nextPhrase()

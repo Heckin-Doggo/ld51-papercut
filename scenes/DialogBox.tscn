@@ -80,7 +80,7 @@ I ain't gonna lie four is pushing it a little. "
 scroll_active = false
 
 [node name="Indicator" type="Polygon2D" parent="."]
-position = Vector2( 544, -90 )
+position = Vector2( 544, -90.7706 )
 color = Color( 0.141176, 0.0862745, 0.0117647, 1 )
 polygon = PoolVector2Array( 431, 222, 456, 222, 443, 240 )
 
