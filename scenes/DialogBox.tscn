@@ -26,8 +26,10 @@ tracks/0/keys = {
 [node name="DialogBox" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -3.0
-margin_bottom = -479.0
+margin_left = 79.0
+margin_top = 506.0
+margin_right = -102.0
+margin_bottom = 27.0
 script = ExtResource( 5 )
 
 [node name="Picture" type="TextureRect" parent="."]
@@ -74,7 +76,8 @@ custom_colors/default_color = Color( 0.117647, 0.0823529, 0.00784314, 1 )
 text = "ohoho I'm gonna say some funny text.
 Maybe even on 2 lines.
 Or three.
-"
+I ain't gonna lie four is pushing it a little. "
+scroll_active = false
 
 [node name="Indicator" type="Polygon2D" parent="."]
 position = Vector2( 544, -90 )

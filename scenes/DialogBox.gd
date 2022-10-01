@@ -23,6 +23,12 @@ func _ready():
 	assert(dialog, "Dialog not found.")
 	nextPhrase()
 
+#func start(dialog_path):
+#	dialogPath = dialog_path
+#	dialog = getDialog()
+#	assert(dialog, "Dialog not found.")
+#	nextPhrase()
+
 # input
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_accept"):
@@ -63,7 +69,7 @@ func nextPhrase() -> void:
 	if f.file_exists(img):
 		$Picture.texture = load(img)
 	else: 
-		$Picture.texture = null
+		$Picture.texture = load("res://assets/art/portraits/Invalid.png")
 		
 	# TODO: update tick sound.
 	var tick = "res://assets/sfx/dialog/" + dialog[phraseNum]["Name"] + ".wav"
