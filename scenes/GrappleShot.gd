@@ -5,6 +5,8 @@ var velocity = Vector2.ZERO
 #if hook is connected to a surface
 var set = false
 
+var string
+
 signal connect
 
 func _ready():

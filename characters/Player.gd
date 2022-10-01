@@ -17,8 +17,13 @@ var velocity = Vector2(0, GRAVITY)
 var hook_connected = false
 #position of connected hook
 var current_hook
+#the string connecting the hook
+var string
 
 var Grapple = preload("res://scenes/GrappleShot.tscn")
+
+func _ready():
+	string = $Line2D
 
 func _physics_process(delta):
 	#Gets the input direction for the players movement

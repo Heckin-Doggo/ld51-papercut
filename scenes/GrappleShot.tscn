@@ -17,8 +17,6 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 disabled = true
 
-[node name="Line2D" type="Line2D" parent="."]
-
 [node name="CollisionTester" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
