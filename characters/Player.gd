@@ -22,9 +22,6 @@ var string
 
 var Grapple = preload("res://scenes/GrappleShot.tscn")
 
-func _ready():
-	string = $Line2D
-
 func _physics_process(delta):
 	#Gets the input direction for the players movement
 	input_dir = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -75,6 +72,7 @@ func shoot_hook(direction):
 	#set projectiles position and velocity
 	grapple.set_velocity(direction.normalized() * GRAPPLE_SHOT_SPEED)
 	grapple.set_position(position)
+	grapple.set_player(self)
 	#place projectile in the world
 	get_parent().add_child(grapple)
 	#let player know the current hook
