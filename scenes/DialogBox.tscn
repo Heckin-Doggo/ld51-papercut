@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://menu/Marker.tres" type="Theme" id=1]
+[ext_resource path="res://assets/art/dialog/Border.png" type="Texture" id=2]
+[ext_resource path="res://assets/art/dialog/TextBox.png" type="Texture" id=3]
+[ext_resource path="res://assets/art/dialog/PortraitTest1.png" type="Texture" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Bob"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 544, -90 ), Vector2( 544, -94 ), Vector2( 544, -90 ) ]
+}
+
+[node name="DialogBox" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -3.0
+margin_bottom = -479.0
+
+[node name="Picture" type="TextureRect" parent="."]
+margin_left = 75.0
+margin_top = 20.0
+margin_right = 216.0
+margin_bottom = 159.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="Border" type="TextureRect" parent="."]
+margin_left = 7.0
+margin_top = 2.0
+margin_right = 288.0
+margin_bottom = 203.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Name" type="Label" parent="Border"]
+margin_left = 69.0
+margin_top = 151.0
+margin_right = 212.0
+margin_bottom = 189.0
+theme = ExtResource( 1 )
+text = "Idiot Man"
+align = 1
+valign = 1
+
+[node name="TextBackground" type="TextureRect" parent="."]
+margin_left = 272.0
+margin_top = 27.0
+margin_right = 1015.0
+margin_bottom = 193.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Dialog" type="Label" parent="TextBackground"]
+margin_left = 27.0
+margin_top = 19.0
+margin_right = 690.0
+margin_bottom = 148.0
+theme = ExtResource( 1 )
+text = "ohoho I'm gonna say some funny text.
+Maybe even on 2 lines.
+Or three.
+"
+
+[node name="Indicator" type="Polygon2D" parent="."]
+position = Vector2( 544, -93.6112 )
+color = Color( 0.141176, 0.0862745, 0.0117647, 1 )
+polygon = PoolVector2Array( 431, 222, 456, 222, 443, 240 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Indicator"]
+anims/Bob = SubResource( 1 )
