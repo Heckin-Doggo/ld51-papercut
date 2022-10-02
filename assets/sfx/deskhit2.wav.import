@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/deskhit2.wav-a8b128fc6112db194b65cf80ce44a3fc.sample"
+
+[deps]
+
+source_file="res://assets/sfx/deskhit2.wav"
+dest_files=[ "res://.import/deskhit2.wav-a8b128fc6112db194b65cf80ce44a3fc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

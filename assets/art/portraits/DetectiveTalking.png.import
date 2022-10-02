@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DetectiveTalk.png-b9962f71ec5f1db8e1fbb64732be71d4.stex"
+path="res://.import/DetectiveTalking.png-7eecb44498d3ac2822b03e48ea513211.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/portraits/DetectiveTalk.png"
-dest_files=[ "res://.import/DetectiveTalk.png-b9962f71ec5f1db8e1fbb64732be71d4.stex" ]
+source_file="res://assets/art/portraits/DetectiveTalking.png"
+dest_files=[ "res://.import/DetectiveTalking.png-7eecb44498d3ac2822b03e48ea513211.stex" ]
 
 [params]
 

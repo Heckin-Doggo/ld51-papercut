@@ -17,6 +17,9 @@ var finished = false
 onready var Name = get_node("Border/Name")
 onready var Dialog = get_node("TextBackground/Dialog")
 
+# signal
+signal finished
+
 func _ready():
 	$Timer.wait_time = textSpeed
 	dialog = getDialog()
@@ -54,6 +57,7 @@ func getDialog() -> Array:
 
 func nextPhrase() -> void:
 	if phraseNum >= len(dialog): # len(dialog) is the num of JSOn dialog elements.
+		emit_signal("finished")
 		queue_free() # delete this dialog box
 		return
 	
