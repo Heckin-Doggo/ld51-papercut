@@ -28,15 +28,17 @@ position = Vector2( 183, 509 )
 scale = Vector2( 0.391288, 0.391288 )
 texture = ExtResource( 1 )
 
-[node name="Portrait" type="Sprite" parent="."]
-position = Vector2( 949, 239 )
-scale = Vector2( 0.575, 0.575 )
-texture = ExtResource( 2 )
-
 [node name="PictureBorder" type="Sprite" parent="."]
 position = Vector2( 952, 279 )
 scale = Vector2( 0.854167, 0.854167 )
+z_index = 1
 texture = ExtResource( 5 )
+
+[node name="Portrait" type="Sprite" parent="PictureBorder"]
+position = Vector2( -3.51221, -46.8293 )
+scale = Vector2( 0.67317, 0.67317 )
+z_index = -1
+texture = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="PictureBorder"]
 margin_left = -203.707
