@@ -69,6 +69,7 @@ func shoot_hook(direction):
 	var grapple = Grapple.instance()
 	#connect functions for when projectile connects to a surface
 	grapple.connect("connect", self, "connect_hook")
+	grapple.connect("break_line", self, "disconnect_hook")
 	#set projectiles position and velocity
 	grapple.set_velocity(direction.normalized() * GRAPPLE_SHOT_SPEED)
 	grapple.set_position(position)
