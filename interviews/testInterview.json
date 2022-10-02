@@ -1,0 +1,13 @@
+[
+    {"Dialog": "res://dialog/dialogTest.json"},
+    {"Choice": {
+        "Option1": {"Dialog": "res://dialog/dialogTest1.json", "Tag": "RIGHT", "Text": "Interesting, thank you for your time."},
+        "Option2": {"Dialog": "res://dialog/dialogTest2.json", "Tag": "WRONG", "Text": "You killed him you son of a bitch!"},
+        "Option3": {"Dialog": "res://dialog/dialogTest3.json", "Tag": "EVIDENCE", "Evidence": 1, "Text": "Oh yeah? Then explain THIS!", "Choice" : {
+            "Option1": {"Dialog": "res://dialog/dialogAccuse1.json", "Tag": "RIGHT", "Text": "Oh, so you DIDN'T kill him, but the wife did?!?!"},
+            "Option2": {"Dialog": "res://dialog/dialogAccuse2.json", "Tag": "WRONG", "Text": "Tell it to the judge, Mr. Mobster!"}
+        }
+    } 
+    }
+}
+]
