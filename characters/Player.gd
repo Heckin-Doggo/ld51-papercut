@@ -91,3 +91,6 @@ func disconnect_hook():
 	if current_hook != null:
 		current_hook.queue_free()
 		current_hook = null
+
+func activate_camera():
+	$Camera2D.current = true

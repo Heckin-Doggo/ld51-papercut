@@ -1,3 +1,114 @@
-[gd_scene format=2]
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://characters/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/art/interview/cork.jpg" type="Texture" id=2]
+[ext_resource path="res://levels/LevelObjects/CrumpledClue.tscn" type="PackedScene" id=3]
+[ext_resource path="res://levels/TutorialLevel.gd" type="Script" id=4]
+[ext_resource path="res://assets/levelitems/Classic-wooden-frame-png.png" type="Texture" id=5]
+[ext_resource path="res://assets/levelitems/corkboardpicture19.png" type="Texture" id=6]
+[ext_resource path="res://levels/EventCamera.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 137.728, 11.2839 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 340, 2625.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 3875, 330.75 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 329.25, 2294 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 582.5, 81 )
 
 [node name="TutorialLevel" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -8265.0
+margin_top = -4791.0
+margin_right = 12023.0
+margin_bottom = 6976.0
+texture = ExtResource( 2 )
+stretch_mode = 2
+
+[node name="LevelBorder" type="StaticBody2D" parent="."]
+
+[node name="Classic-wooden-frame-png" type="Sprite" parent="LevelBorder"]
+position = Vector2( 3280, -1904 )
+scale = Vector2( 30.634, 30.634 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelBorder"]
+position = Vector2( 3376.83, 612.67 )
+scale = Vector2( 30.634, 30.634 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="LevelBorder"]
+position = Vector2( -502, -2359.5 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="LevelBorder"]
+position = Vector2( 3712, -4655.75 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="LevelBorder"]
+position = Vector2( 7257.75, -2028 )
+shape = SubResource( 5 )
+
+[node name="FloorTape" type="StaticBody2D" parent="."]
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="FloorTape"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FloorTape"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="FloorTape2" type="StaticBody2D" parent="."]
+position = Vector2( 580, -1 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="FloorTape2"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FloorTape2"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="FloorTape3" type="StaticBody2D" parent="."]
+position = Vector2( 1143, 0 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="FloorTape3"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FloorTape3"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="EventCamera" type="Camera2D" parent="."]
+script = ExtResource( 7 )
+
+[node name="Tween" type="Tween" parent="EventCamera"]
+
+[node name="CrumpledClue" parent="." instance=ExtResource( 3 )]
+position = Vector2( 984, -86 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 27, -149 )
+MOVE_SPEED = 500
+GRAVITY = 750
+JUMP_FORCE = 750
