@@ -6,6 +6,9 @@ extends Control
 
 # settings
 export var dialogPath = ""
+export var oneshotString = ""
+export var oneshotSpeaker = ""
+export var oneshotImage = ""
 export(float) var textSpeed = 0.05
 
 var dialog
@@ -22,9 +25,17 @@ signal finished
 
 func _ready():
 	$Timer.wait_time = textSpeed
-	dialog = getDialog()
-	assert(dialog, "Dialog not found.")
-	nextPhrase()
+	if oneshotString == "": 
+		dialog = getDialog()
+		assert(dialog, "Dialog not found.")
+		nextPhrase()
+	else: 
+		dialog = [{
+			"Name": oneshotSpeaker,
+			"Image": oneshotImage,
+			"Text": oneshotString
+		}]
+		nextPhrase()
 
 #func start(dialog_path):
 #	dialogPath = dialog_path
