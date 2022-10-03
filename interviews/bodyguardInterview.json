@@ -1,6 +1,6 @@
 [
     {"Type": "Begin", "Suspect": "Bodyguard", "Image": "Default"},
-    {"Type": "Restart", "View": "Both", "Name": "Bodyguard", "Image": "Confused", "Text": "What, you again? Didn't I tell you do scram last time?"},
+    {"Type": "Restart", "View": "Both", "Name": "Bodyguard", "Image": "Confused", "Text": "What, you again? Didn't I tell you to scram last time?"},
 
     {"Type": "Dialog", "View": "Both", "Name": "Detective", "Image": "Default", "Text": "(The bodyguard was a goon who looked like he preferred fists to words and seemed anxious to communicate.)"},
     {"Type": "Dialog", "View": "Both", "Name": "Bodyguard", "Image": "Suspicious", "Text": "What do you want with me?"},
@@ -11,7 +11,7 @@
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Yeah? A little bird told me otherwise."},
     {"Type": "Choice", "Options": [
         {"Requires": "ReporterTestimony", "Correct": true, "Text": "Bring up the reporter's testimony."},
-        {"Requires": "ProtestorTestimony", "Correct": false, "Text": "Bring up the protestor's testimony.", "Dialog": [
+        {"Requires": "ProtesterTestimony", "Correct": false, "Text": "Bring up the protestor's testimony.", "Dialog": [
             {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "A protestor told me you and him had a bit of a kerfuffle, is that true?"},
             {"Type": "Dialog", "View": "Suspect", "Name": "Bodyguard", "Image": "Confused", "Text": "That guy? Yeah, I keep the peace, so what of it? It's my job."},
             {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Maybe I'm following the wrong lead here...)"}
@@ -31,7 +31,7 @@
     {"Type": "Choice", "Options": [
         {"Requires": "MayorTimeline", "Correct": true, "Text": "Bring up the timeline of events."},
         {"Requires": "EventPhoto", "Correct": false, "Text": "Show the photo of the event.", "Dialog": "default"},
-        {"Requires": "TrunkCompartment", "Correct": false, "Text": "Bring up the truck compartment.", "Dialog": "default"}
+        {"Requires": "CarCompartment", "Correct": false, "Text": "Bring up the truck compartment.", "Dialog": "default"}
     ]},
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "By the time you were getting the suitcase, the mayor was already heading up the lift."},
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "If you wanted to do a good job, you were a little late."},

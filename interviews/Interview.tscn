@@ -65,6 +65,7 @@ align = 1
 valign = 1
 
 [node name="Both" type="Node2D" parent="."]
+visible = false
 
 [node name="Detective" type="Sprite" parent="Both"]
 position = Vector2( 259, 349 )

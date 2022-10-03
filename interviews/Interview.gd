@@ -2,6 +2,9 @@ extends Control
 
 export var interviewPath = ""
 
+onready var Music = get_node("/root/Music")
+onready var Global = get_node("/root/Global")
+
 var interview  # holds all the JSON
 
 var phraseNum = 0
@@ -21,12 +24,23 @@ var dialogBox = preload("res://scenes/DialogBox.tscn")
 # currently shown view
 var currentView = null
 
+# for _ready function hijacking
 var ready = false
 var trigger = false
+
+# correct button options
+var correctOption = -1
+var actual_options = []
+var selectedOption = -1
+
+# wackass temp jery rigging
+var subdialog = []
+var subdialogNum = 0
 
 
 
 func _ready():
+	Music.change_song("Tense")
 	interview = getInterview()
 	assert(interview, "Interview not found.")
 	initInterview()
@@ -34,7 +48,7 @@ func _ready():
 	# init buttons
 	for i in range(3):
 		var optionButton = EvidenceSelect.get_node(str(i))
-		optionButton.connect("pressed", self, "onOptionPressed")
+		optionButton.connect("pressed", self, "onOption"+str(i)+"Pressed")
 	
 	nextPhrase()
 
@@ -44,7 +58,19 @@ func _process(delta):
 	if (Input.is_action_just_pressed("ui_accept") and ready) or trigger:
 		ready = false
 		trigger = false
-		nextPhrase()
+		if !subdialog:
+			nextPhrase()
+		else:
+			# run dialog
+			dialog(subdialog[subdialogNum]);
+			
+			subdialogNum += 1
+			# if last, remove
+			if (subdialogNum >= len(subdialog)):
+				subdialog = []  # remove subdialog
+				interview[phraseNum]["Type"] = "Choice"
+			
+			
 
 
 func getInterview() -> Array:
@@ -66,8 +92,10 @@ func initInterview():
 	print("Begin")
 	var token = interview[phraseNum];
 	
+	var suspect = token["Suspect"]
+	
 	var f = File.new()
-	var img = "res://assets/art/portraits/" + token["Suspect"] + token["Image"] + ".png"
+	var img = "res://assets/art/portraits/" + suspect + token["Image"] + ".png"
 	
 	# load image
 	if f.file_exists(img):
@@ -84,11 +112,13 @@ func initInterview():
 	phraseNum += 1
 	
 	token = interview[phraseNum]
-	if token["Type"] == "Restart" and restarted:
+	# if we seen this guy before
+	if token["Type"] == "Restart" and Global.seenSuspects[suspect]:
 		# put this dialog in the queue.
 		token["Type"] = "Dialog"
 	else:
-		# skip this token
+		# skip this token, but note that we saw him
+		Global.seenSuspects[suspect] = true
 		phraseNum += 1
 
 
@@ -117,7 +147,8 @@ func nextPhrase():
 			print("ready")
 			ready = true
 		"Choice": 
-			phraseNum += 1
+			# TODO: Do we want to advance yet? We need to re-reference.
+#			phraseNum += 1
 			# setup scene
 			if currentView:
 				currentView.visible = false
@@ -127,14 +158,46 @@ func nextPhrase():
 			EvidenceSelect.visible = true
 			
 			var options = token["Options"]
-			print(options[0]["Text"])
 			
-			for i in range(3):
+			# clear class variables
+			actual_options = []
+			correctOption = -1
+			selectedOption = -1
+			
+			for option in options:
+				var require = option["Requires"]
+				if Global.evidence[require]:  # if its in evidence list.
+					actual_options.append(option)
+			
+			if len(actual_options) == 0:
+				pass
+				# TODO: Skip to fail text.
+			
+			for i in range(len(actual_options)):
 				var optionButton = EvidenceSelect.get_node(str(i))
-				optionButton.get_node("Label").text = options[i]["Text"]
+				optionButton.get_node("Label").text = actual_options[i]["Text"]
 				optionButton.visible = true
 				
+				if actual_options[i]["Correct"]:
+					correctOption = i
+				
 				optionButton.connect("pressed", self, "onOptionPressed")
+			
+			token["Type"] = "SeenChoice" # repeat this for the next thing.
+			
+			
+			
+		"SeenChoice":
+			if selectedOption == correctOption:
+				selectedOption = -1
+				correctOption = -1
+				phraseNum += 1
+				trigger = true
+				return
+			# else
+			subdialog = actual_options[selectedOption]["Dialog"]
+			subdialogNum = 0
+			trigger = true
 			
 			
 			
@@ -147,15 +210,27 @@ func nextPhrase():
 			phraseNum += 1
 
 
-func onOptionPressed():
-	print("clicked!")
+func onOption0Pressed():
+	print("0 clicked!")
+	selectedOption = 0
+	clearButtons()
+
+func onOption1Pressed():
+	print("1 clicked!")
+	selectedOption = 1
+	clearButtons()
+	
+func onOption2Pressed():
+	print("2 clicked!")
+	selectedOption = 2
+	clearButtons()
+
+func clearButtons():
 	EvidenceSelect.get_node("0").visible = false
 	EvidenceSelect.get_node("1").visible = false
 	EvidenceSelect.get_node("2").visible = false
 	EvidenceSelect.visible = false
 	trigger = true
-
-
 
 
 func dialog(token):
@@ -190,10 +265,7 @@ func dialog(token):
 			SuspectView.get_node("PictureBorder/Portrait").texture = load("res://assets/art/portraits/Invalid.png")
 			BothView.get_node("PictureBorder/Portrait").texture = load("res://assets/art/portraits/Invalid.png")
 	
-	
-	
-	
-	
+
 	# dialog box
 	var dialogInst = dialogBox.instance()
 	dialogInst.oneshotSpeaker = characterName
