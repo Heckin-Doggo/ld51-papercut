@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/art/interview/cork.jpg" type="Texture" id=2]
@@ -19,6 +19,12 @@
 [ext_resource path="res://assets/cluenotes/podiummovedclue.png" type="Texture" id=17]
 [ext_resource path="res://assets/cluenotes/protesterclue.png" type="Texture" id=18]
 [ext_resource path="res://assets/art/portraits/ManagerDefault.png" type="Texture" id=19]
+[ext_resource path="res://assets/cluenotes/refreshmenttableclue.png" type="Texture" id=20]
+[ext_resource path="res://assets/cluenotes/calllogclue.png" type="Texture" id=21]
+[ext_resource path="res://assets/cluenotes/reporterphotoclue.png" type="Texture" id=22]
+[ext_resource path="res://assets/cluenotes/suitcaseincarclue.png" type="Texture" id=23]
+[ext_resource path="res://assets/cluenotes/sniperclue.png" type="Texture" id=24]
+[ext_resource path="res://assets/cluenotes/wifeatcarclue.png" type="Texture" id=25]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 582.5, 81 )
@@ -351,6 +357,84 @@ position = Vector2( -0.87368, 3.2495 )
 scale = Vector2( 0.185209, 0.185209 )
 texture = ExtResource( 18 )
 
+[node name="CrumpledClue8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1298, -3427 )
+clue_name = "RefreshmentClue"
+
+[node name="RefreshmentClue" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1294, -3731 )
+
+[node name="Sprite" parent="RefreshmentClue" index="1"]
+position = Vector2( 4.2308, 2.00003 )
+scale = Vector2( 0.180289, 0.180289 )
+texture = ExtResource( 20 )
+
+[node name="CrumpledClue9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1534, -3427 )
+clue_name = "ReporterPhoto"
+
+[node name="ReporterPhoto" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1526, -3723 )
+
+[node name="Sprite" parent="ReporterPhoto" index="1"]
+position = Vector2( -1, -2 )
+scale = Vector2( 0.193205, 0.193205 )
+texture = ExtResource( 22 )
+
+[node name="CrumpledClue10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1854, -3423 )
+clue_name = "WifeCar"
+
+[node name="WifeCar" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1838, -3719 )
+
+[node name="Sprite" parent="WifeCar" index="1"]
+position = Vector2( 1.98201, -3.25 )
+scale = Vector2( 0.180456, 0.180456 )
+texture = ExtResource( 25 )
+
+[node name="CrumpledClue11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2138, -3415 )
+clue_name = "SniperClue"
+
+[node name="SniperClue" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2138, -3707 )
+
+[node name="Sprite" parent="SniperClue" index="1"]
+position = Vector2( 3, 2 )
+scale = Vector2( 0.181604, 0.181604 )
+texture = ExtResource( 24 )
+
+[node name="CrumpledClue12" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2422, -3411 )
+clue_name = "Calllog"
+
+[node name="Calllog" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2418, -3703 )
+
+[node name="Sprite" parent="Calllog" index="1"]
+position = Vector2( 0.999023, 1 )
+scale = Vector2( 0.18009, 0.18009 )
+texture = ExtResource( 21 )
+
+[node name="CrumpledClue13" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2766, -3419 )
+clue_name = "SuitcaseSpotted"
+
+[node name="SuitcaseSpotted" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2762, -3687 )
+
+[node name="Sprite" parent="SuitcaseSpotted" index="1"]
+position = Vector2( -2.31362, -0.967457 )
+scale = Vector2( 0.179592, 0.179592 )
+texture = ExtResource( 23 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 27, -149 )
+MOVE_SPEED = 500
+GRAVITY = 750
+JUMP_FORCE = 750
+
 [node name="BodyguardPortrait" parent="." instance=ExtResource( 14 )]
 position = Vector2( 3968.86, -1440.65 )
 scale = Vector2( 0.5, 0.5 )
@@ -390,48 +474,6 @@ texture = ExtResource( 13 )
 
 [node name="Sprite2" type="Sprite" parent="WifePortrait"]
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 27, -149 )
-MOVE_SPEED = 500
-GRAVITY = 750
-JUMP_FORCE = 750
-
-[node name="CrumpledClue8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1298, -3427 )
-
-[node name="StaticBody2D" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1294, -3731 )
-
-[node name="CrumpledClue9" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1534, -3427 )
-
-[node name="StaticBody2D2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1526, -3723 )
-
-[node name="CrumpledClue10" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1854, -3423 )
-
-[node name="StaticBody2D3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1838, -3719 )
-
-[node name="CrumpledClue11" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2138, -3415 )
-
-[node name="StaticBody2D4" parent="." instance=ExtResource( 5 )]
-position = Vector2( 2138, -3707 )
-
-[node name="CrumpledClue12" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2422, -3411 )
-
-[node name="StaticBody2D5" parent="." instance=ExtResource( 5 )]
-position = Vector2( 2418, -3703 )
-
-[node name="CrumpledClue13" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2766, -3419 )
-
-[node name="StaticBody2D6" parent="." instance=ExtResource( 5 )]
-position = Vector2( 2762, -3687 )
-
 [editable path="BodyguardSpotted"]
 [editable path="Briefcase"]
 [editable path="MayorTimeline"]
@@ -439,6 +481,12 @@ position = Vector2( 2762, -3687 )
 [editable path="TrunkCompartment"]
 [editable path="PodiumMoved"]
 [editable path="Protester"]
+[editable path="RefreshmentClue"]
+[editable path="ReporterPhoto"]
+[editable path="WifeCar"]
+[editable path="SniperClue"]
+[editable path="Calllog"]
+[editable path="SuitcaseSpotted"]
 [editable path="BodyguardPortrait"]
 [editable path="CampaignManagerPortrait"]
 [editable path="WifePortrait"]
