@@ -621,6 +621,7 @@ texture = ExtResource( 26 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 27, -149 )
+scale = Vector2( 1.5, 1.5 )
 MOVE_SPEED = 500
 GRAVITY = 750
 JUMP_FORCE = 750
