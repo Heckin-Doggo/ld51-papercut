@@ -1,5 +1,5 @@
 [
-    {"Type": "Begin", "Suspect": "Bodyguard", "Image": "Neutral"},
+    {"Type": "Begin", "Suspect": "Bodyguard", "Image": "Default"},
     {"Type": "Restart", "View": "Both", "Name": "Bodyguard", "Image": "Confused", "Text": "What, you again? Didn't I tell you do scram last time?"},
 
     {"Type": "Dialog", "View": "Both", "Name": "Narrator", "Image": "Default", "Text": "(The bodyguard was a goon who looked like he preferred fists to words and seemed anxious to communicate.)"},

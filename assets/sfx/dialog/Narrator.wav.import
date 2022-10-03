@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Test.wav-994906f0ec2cee4708a4519caca9faef.sample"
+path="res://.import/Narrator.wav-6ba2b39f619f5a366d7875353e99fbb7.sample"
 
 [deps]
 
-source_file="res://assets/sfx/dialog/Test.wav"
-dest_files=[ "res://.import/Test.wav-994906f0ec2cee4708a4519caca9faef.sample" ]
+source_file="res://assets/sfx/dialog/Narrator.wav"
+dest_files=[ "res://.import/Narrator.wav-6ba2b39f619f5a366d7875353e99fbb7.sample" ]
 
 [params]
 

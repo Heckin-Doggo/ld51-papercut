@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Test.wav-994906f0ec2cee4708a4519caca9faef.sample"
+path="res://.import/Bodyguard.wav-bc1ed7c2abd8831ac7a50d0569cd211d.sample"
 
 [deps]
 
-source_file="res://assets/sfx/dialog/Test.wav"
-dest_files=[ "res://.import/Test.wav-994906f0ec2cee4708a4519caca9faef.sample" ]
+source_file="res://assets/sfx/dialog/Bodyguard.wav"
+dest_files=[ "res://.import/Bodyguard.wav-bc1ed7c2abd8831ac7a50d0569cd211d.sample" ]
 
 [params]
 
