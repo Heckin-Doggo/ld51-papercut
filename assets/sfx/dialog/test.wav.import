@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/Test.wav-994906f0ec2cee4708a4519caca9faef.sample"
+path="res://.import/test.wav-8a72108f292de45519ad67c9124ee55b.sample"
 
 [deps]
 
-source_file="res://assets/sfx/dialog/Test.wav"
-dest_files=[ "res://.import/Test.wav-994906f0ec2cee4708a4519caca9faef.sample" ]
+source_file="res://assets/sfx/dialog/test.wav"
+dest_files=[ "res://.import/test.wav-8a72108f292de45519ad67c9124ee55b.sample" ]
 
 [params]
 
@@ -17,7 +17,5 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop_mode=0
-edit/loop_begin=0
-edit/loop_end=-1
+edit/loop=false
 compress/mode=0

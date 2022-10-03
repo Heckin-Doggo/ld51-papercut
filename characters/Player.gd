@@ -67,9 +67,9 @@ func move(delta):
 	velocity = move_and_slide(new_velocity, Vector2.UP)
 
 func _process(_delta):
-	if velocity.x < 0:
+	if input_dir < 0:
 		sprite.flip_h = true
-	else:
+	elif input_dir > 0:
 		sprite.flip_h = false
 	
 	if grappling and hook_connected:
