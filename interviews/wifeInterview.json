@@ -36,13 +36,25 @@
             {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Confused", "Text": "That's your big evidence! Ha! Pathetic!"},
             {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Maybe I'm following the wrong lead here...)"}
         ]},
-        {"Requires": "SuitecaseDiscrepency", "Correct": true, "Text": "She was hiding a suitcase."},
+        {"Requires": "SuitcaseDiscrepency", "Correct": true, "Text": "She was hiding a suitcase."},
         {"Requires": "", "Correct": false, "Text": "She was calling a sniper.", "Dialog": [
             {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Show", "Text": "Take a look at this."},
             {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Confused", "Text": "That's your big evidence! Ha! Pathetic!"},
             {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Maybe I'm following the wrong lead here...)"}
         ]}
     ]},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "The bodyguard claimed that he saw another suitcase at the same time as the mayor was heading to the stage."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "I thought he was lying, but maybe he was telling the truth."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "Maybe there were two suitcases."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Worried", "Text": "Two suitcases? Now you're speaking nonsense!"},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Nonsense is the perfect mask for brilliance."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "You knew if the bomb was planted in the mayor's suitcase, we would be watching that suitcase like hawks."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "The obvious conclusion was that the killer planted a bomb in it."},
+
+
+
+
+
 
     {"Type": "FailDialog", "View": "Detective", "Name": "Detective", "Image": "Show", "Text": "What do you think of this?"},
     {"Type": "FailDialog", "View": "Suspect", "Name": "Manager", "Image": "Confused", "Text": "I think you're wasting my valuable time. You know, if you don't mind, I've really got a meeting to catch."},
