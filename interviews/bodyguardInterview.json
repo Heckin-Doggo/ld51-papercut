@@ -31,7 +31,7 @@
     {"Type": "Choice", "Options": [
         {"Requires": "MayorTimeline", "Correct": true, "Text": "Bring up the timeline of events."},
         {"Requires": "EventPhoto", "Correct": false, "Text": "Show the photo of the event.", "Dialog": "default"},
-        {"Requires": "CarCompartment", "Correct": false, "Text": "Bring up the truck compartment.", "Dialog": "default"}
+        {"Requires": "CarCompartment", "Correct": false, "Text": "Bring up the trunk compartment.", "Dialog": "default"}
     ]},
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "By the time you were getting the suitcase, the mayor was already heading up the lift."},
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "If you wanted to do a good job, you were a little late."},
@@ -58,7 +58,7 @@
 
     {"Type": "FailDialog", "View": "Detective", "Name": "Detective", "Image": "Show", "Text": "Read it and weep, pal."},
     {"Type": "FailDialog", "View": "Suspect", "Name": "Bodyguard", "Image": "Confused", "Text": "What?"},
-    {"Type": "FailDialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "It hurts, doesn't it? To see all you lies reduced to smoke?"},
+    {"Type": "FailDialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "It hurts, doesn't it? To see all your lies reduced to smoke?"},
     {"Type": "FailDialog", "View": "Suspect", "Name": "Bodyguard", "Image": "Mad", "Text": "You're clearly smoking something. Now listen, I may be an upstanding citizen, but I got buddies who aren't."},
     {"Type": "FailDialog", "View": "Suspect", "Name": "Bodyguard", "Image": "Mad", "Text": "And unless you really wanna get smoked, get out of my face."},
     {"Type": "FailDialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Hmm, I think I'm on the right track. Is there something I'm missing?)"}

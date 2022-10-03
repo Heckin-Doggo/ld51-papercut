@@ -37,6 +37,8 @@ var selectedOption = -1
 var subdialog = []
 var subdialogNum = 0
 
+signal finished
+
 
 
 func _ready():
@@ -122,9 +124,16 @@ func initInterview():
 		phraseNum += 1
 
 
+func finish():
+	emit_signal("finished")
+	queue_free()
+
+
 func nextPhrase():
 	if phraseNum >= len(interview): # len(dialog) is the num of JSOn dialog elements.
 		finished = true
+		print("DONE WITH DIALOG")
+		finish()
 		return false
 	
 	# get state
@@ -149,13 +158,6 @@ func nextPhrase():
 		"Choice": 
 			# TODO: Do we want to advance yet? We need to re-reference.
 #			phraseNum += 1
-			# setup scene
-			if currentView:
-				currentView.visible = false
-			currentView = get_node("Both")
-			currentView.visible = true
-			
-			EvidenceSelect.visible = true
 			
 			var options = token["Options"]
 			
@@ -170,8 +172,8 @@ func nextPhrase():
 					actual_options.append(option)
 			
 			if len(actual_options) == 0:
-				pass
-				# TODO: Skip to fail text.
+				jumpToFail()
+				return
 			
 			for i in range(len(actual_options)):
 				var optionButton = EvidenceSelect.get_node(str(i))
@@ -183,8 +185,21 @@ func nextPhrase():
 				
 				optionButton.connect("pressed", self, "onOptionPressed")
 			
+			# softlock prevention
+			if correctOption == -1:
+				print("Softlock prevented: no applicable evidence")
+				jumpToFail()
+				return
+			
 			token["Type"] = "SeenChoice" # repeat this for the next thing.
 			
+			# setup scene
+			if currentView:
+				currentView.visible = false
+			currentView = get_node("Both")
+			currentView.visible = true
+			
+			EvidenceSelect.visible = true
 			
 			
 		"SeenChoice":
@@ -195,7 +210,12 @@ func nextPhrase():
 				trigger = true
 				return
 			# else
-			subdialog = actual_options[selectedOption]["Dialog"]
+			var choiceDialog = actual_options[selectedOption]["Dialog"]
+			if choiceDialog == "default":
+				jumpToFail()
+				return
+			# else
+			subdialog = actual_options[selectedOption]["Dialog"] 
 			subdialogNum = 0
 			trigger = true
 			
@@ -206,6 +226,9 @@ func nextPhrase():
 			
 			if failed:
 				dialog(token)
+			else:
+				print("DONE WITH DIALOG - GOOD ENDING!")
+				finish() # SHOULD BE FINE IN GAME
 		_:
 			phraseNum += 1
 
@@ -231,6 +254,18 @@ func clearButtons():
 	EvidenceSelect.get_node("2").visible = false
 	EvidenceSelect.visible = false
 	trigger = true
+
+
+func jumpToFail():
+	failed = true
+	while (phraseNum < len(interview)):
+		var token = interview[phraseNum]
+		if token["Type"] == "FailDialog":
+			print("Jumped to fail dialog.")
+			trigger = true
+			return
+		phraseNum += 1
+	print("No fail found.")
 
 
 func dialog(token):
