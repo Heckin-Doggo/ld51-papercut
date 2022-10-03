@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/levelitems/corkboardpicture19.png" type="Texture" id=6]
 [ext_resource path="res://levels/EventCamera.gd" type="Script" id=7]
 [ext_resource path="res://assets/levelitems/Classic-wooden-frame-png.png" type="Texture" id=8]
-[ext_resource path="res://assets/levelitems/corkboardpicture8.png" type="Texture" id=9]
+[ext_resource path="res://assets/cluenotes/photoofmayorclue.png" type="Texture" id=9]
 [ext_resource path="res://assets/cluenotes/bodyguardspottedclue.png" type="Texture" id=10]
 [ext_resource path="res://assets/cluenotes/mayortimelineclue.png" type="Texture" id=11]
 [ext_resource path="res://assets/art/portraits/BodyguardDefault.png" type="Texture" id=12]
@@ -262,45 +262,171 @@ shape = SubResource( 4 )
 position = Vector2( 7257.75, -2028 )
 shape = SubResource( 5 )
 
+[node name="FloorTape14" type="StaticBody2D" parent="StaticObjects"]
+position = Vector2( 1964.97, -2318 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape14"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/FloorTape14"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="FloorTape15" type="StaticBody2D" parent="StaticObjects"]
+position = Vector2( 1392.97, -2317 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape15"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/FloorTape15"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="FloorTape16" type="StaticBody2D" parent="StaticObjects"]
+position = Vector2( 812.966, -2312 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape16"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/FloorTape16"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="FloorTape17" type="StaticBody2D" parent="StaticObjects"]
+position = Vector2( 217.966, -2322 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape17"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/FloorTape17"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="FloorTape18" type="StaticBody2D" parent="StaticObjects"]
+position = Vector2( 393.966, -2878 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape18"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/FloorTape18"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="FloorTape19" type="StaticBody2D" parent="StaticObjects"]
+position = Vector2( 974.966, -2869 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape19"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/FloorTape19"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="FloorTape20" type="StaticBody2D" parent="StaticObjects"]
+position = Vector2( 1554.97, -2869 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape20"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/FloorTape20"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="FloorTape21" type="StaticBody2D" parent="StaticObjects"]
+position = Vector2( 5497.97, -2236 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape21"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/FloorTape21"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="FloorTape22" type="StaticBody2D" parent="StaticObjects"]
+position = Vector2( 3956.97, -2660 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape22"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/FloorTape22"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
 [node name="EventCamera" type="Camera2D" parent="."]
 script = ExtResource( 7 )
 
 [node name="Tween" type="Tween" parent="EventCamera"]
 
-[node name="CrumpledClue2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 583, -652 )
-clue_name = "BodyguardSpotted"
+[node name="ReporterTestimonyClue" parent="." instance=ExtResource( 3 )]
+position = Vector2( 731, -85 )
+clue_name = "ReporterTestimony"
 
-[node name="BodyguardSpotted" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1203, -949 )
+[node name="ReporterTestimony" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1348, -534 )
 collision_layer = 3
 collision_mask = 3
 
-[node name="Sprite" parent="BodyguardSpotted" index="1"]
+[node name="Sprite" parent="ReporterTestimony" index="1"]
 position = Vector2( -7, 0 )
 scale = Vector2( 0.172794, 0.172794 )
 texture = ExtResource( 10 )
 
-[node name="CrumpledClue" parent="." instance=ExtResource( 3 )]
-position = Vector2( 977, -55 )
-clue_name = "Briefcase"
+[node name="ProtesterTestimonyClue" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2649, -1711 )
+clue_name = "ProtesterTestimony"
 
-[node name="Briefcase" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1486, -368 )
+[node name="ProtesterTestimony" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2650, -2094 )
 collision_layer = 3
 collision_mask = 3
 
-[node name="Sprite" parent="Briefcase" index="1"]
-position = Vector2( 129, -113 )
-scale = Vector2( 0.217333, 0.217333 )
-texture = ExtResource( 9 )
+[node name="Sprite" parent="ProtesterTestimony" index="1"]
+position = Vector2( -0.87368, 3.2495 )
+scale = Vector2( 0.185209, 0.185209 )
+texture = ExtResource( 18 )
 
-[node name="CrumpledClue3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2146, -1219 )
+[node name="MayorTimeLineClue" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1912, -1264 )
 clue_name = "MayorTimeline"
 
 [node name="MayorTimeline" parent="." instance=ExtResource( 5 )]
-position = Vector2( 2703, -1081 )
+position = Vector2( 2642, -1085 )
 collision_layer = 3
 collision_mask = 3
 
@@ -309,125 +435,145 @@ position = Vector2( 1, 0 )
 scale = Vector2( 0.199592, 0.199592 )
 texture = ExtResource( 11 )
 
-[node name="CrumpledClue4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2444, 196 )
+[node name="EventPhotoClue" parent="." instance=ExtResource( 3 )]
+position = Vector2( 801, -682 )
+clue_name = "EventPhoto"
+
+[node name="EventPhoto" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1319, -1005 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="Sprite" parent="EventPhoto" index="1"]
+position = Vector2( 3.00049, 2 )
+scale = Vector2( 0.191825, 0.191825 )
+texture = ExtResource( 9 )
+
+[node name="CarCompartmentClue" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4899, -1823 )
+clue_name = "CarCompartment"
+
+[node name="CarCompartment" parent="." instance=ExtResource( 5 )]
+position = Vector2( 5273, -2144 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="Sprite" parent="CarCompartment" index="1"]
+position = Vector2( 3, 2 )
+scale = Vector2( 0.178709, 0.178709 )
+texture = ExtResource( 16 )
+
+[node name="BulletClue" parent="." instance=ExtResource( 3 )]
+position = Vector2( 246, -2425 )
 clue_name = "Bullet"
 
 [node name="Bullet" parent="." instance=ExtResource( 5 )]
-position = Vector2( 4589, -259 )
+position = Vector2( 233, -2799 )
+collision_layer = 3
+collision_mask = 3
 
 [node name="Sprite" parent="Bullet" index="1"]
 position = Vector2( -6, 6 )
 scale = Vector2( 0.196897, 0.196897 )
 texture = ExtResource( 15 )
 
-[node name="CrumpledClue5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4575, -406 )
-clue_name = "TrunkCompartment"
+[node name="PodiumChangeClue" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2256, -2812 )
+clue_name = "PodiumChange"
 
-[node name="TrunkCompartment" parent="." instance=ExtResource( 5 )]
-position = Vector2( 4904, -669 )
+[node name="PodiumChange" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1170, -3375 )
+collision_layer = 3
+collision_mask = 3
 
-[node name="Sprite" parent="TrunkCompartment" index="1"]
-position = Vector2( 3, 2 )
-scale = Vector2( 0.178709, 0.178709 )
-texture = ExtResource( 16 )
-
-[node name="CrumpledClue6" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4903, -819 )
-clue_name = "PodiumMoved"
-
-[node name="PodiumMoved" parent="." instance=ExtResource( 5 )]
-position = Vector2( 5984, 124 )
-
-[node name="Sprite" parent="PodiumMoved" index="1"]
+[node name="Sprite" parent="PodiumChange" index="1"]
 position = Vector2( -1.96093, -2.12817 )
 scale = Vector2( 0.180195, 0.180195 )
 texture = ExtResource( 17 )
 
-[node name="CrumpledClue7" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4115, -131 )
-clue_name = "Protester"
-
-[node name="Protester" parent="." instance=ExtResource( 5 )]
-position = Vector2( 4268, -119 )
-
-[node name="Sprite" parent="Protester" index="1"]
-position = Vector2( -0.87368, 3.2495 )
-scale = Vector2( 0.185209, 0.185209 )
-texture = ExtResource( 18 )
-
-[node name="CrumpledClue8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1298, -3427 )
-clue_name = "RefreshmentClue"
-
-[node name="RefreshmentClue" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1294, -3731 )
-
-[node name="Sprite" parent="RefreshmentClue" index="1"]
-position = Vector2( 4.2308, 2.00003 )
-scale = Vector2( 0.180289, 0.180289 )
-texture = ExtResource( 20 )
-
-[node name="CrumpledClue9" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1534, -3427 )
+[node name="ReporterPhotoClue" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5766, -2323 )
 clue_name = "ReporterPhoto"
 
 [node name="ReporterPhoto" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1526, -3723 )
+position = Vector2( 4659, -2575 )
+collision_layer = 3
+collision_mask = 3
 
 [node name="Sprite" parent="ReporterPhoto" index="1"]
 position = Vector2( -1, -2 )
 scale = Vector2( 0.193205, 0.193205 )
 texture = ExtResource( 22 )
 
-[node name="CrumpledClue10" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1854, -3423 )
-clue_name = "WifeCar"
+[node name="CallLogClue" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1498, -2971 )
+clue_name = "CallLog"
 
-[node name="WifeCar" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1838, -3719 )
+[node name="CallLog" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2224, -3385 )
+collision_layer = 3
+collision_mask = 3
 
-[node name="Sprite" parent="WifeCar" index="1"]
-position = Vector2( 1.98201, -3.25 )
-scale = Vector2( 0.180456, 0.180456 )
-texture = ExtResource( 25 )
-
-[node name="CrumpledClue11" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2138, -3415 )
-clue_name = "SniperClue"
-
-[node name="SniperClue" parent="." instance=ExtResource( 5 )]
-position = Vector2( 2138, -3707 )
-
-[node name="Sprite" parent="SniperClue" index="1"]
-position = Vector2( 3, 2 )
-scale = Vector2( 0.181604, 0.181604 )
-texture = ExtResource( 24 )
-
-[node name="CrumpledClue12" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2422, -3411 )
-clue_name = "Calllog"
-
-[node name="Calllog" parent="." instance=ExtResource( 5 )]
-position = Vector2( 2418, -3703 )
-
-[node name="Sprite" parent="Calllog" index="1"]
+[node name="Sprite" parent="CallLog" index="1"]
 position = Vector2( 0.999023, 1 )
 scale = Vector2( 0.18009, 0.18009 )
 texture = ExtResource( 21 )
 
-[node name="CrumpledClue13" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2766, -3419 )
-clue_name = "SuitcaseSpotted"
+[node name="RefreshmentTableClue" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4205, -2740 )
+clue_name = "RefreshmentTable"
 
-[node name="SuitcaseSpotted" parent="." instance=ExtResource( 5 )]
-position = Vector2( 2762, -3687 )
+[node name="RefreshmentTable" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4645, -3132 )
+collision_layer = 3
+collision_mask = 3
 
-[node name="Sprite" parent="SuitcaseSpotted" index="1"]
+[node name="Sprite" parent="RefreshmentTable" index="1"]
+position = Vector2( 4.2308, 2.00003 )
+scale = Vector2( 0.180289, 0.180289 )
+texture = ExtResource( 20 )
+
+[node name="SniperTestimonyClue" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4648, -3319 )
+clue_name = "SniperTestimony"
+
+[node name="SniperTestimony" parent="." instance=ExtResource( 5 )]
+position = Vector2( 5264, -3285 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="Sprite" parent="SniperTestimony" index="1"]
+position = Vector2( 1.98201, -3.25 )
+scale = Vector2( 0.180456, 0.180456 )
+texture = ExtResource( 25 )
+
+[node name="SuitcaseDiscrepencyClue" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4271, -1225 )
+clue_name = "SuitcaseDiscrepency"
+
+[node name="SuitcaseDiscrepency" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2649, -1521 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="Sprite" parent="SuitcaseDiscrepency" index="1"]
 position = Vector2( -2.31362, -0.967457 )
 scale = Vector2( 0.179592, 0.179592 )
 texture = ExtResource( 23 )
+
+[node name="AssassinPlotClue" parent="." instance=ExtResource( 3 )]
+position = Vector2( -48, -3532 )
+clue_name = "AssassinPlot"
+
+[node name="AssassinPlot" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4897, -1670 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="Sprite" parent="AssassinPlot" index="1"]
+position = Vector2( 3, 2 )
+scale = Vector2( 0.181604, 0.181604 )
+texture = ExtResource( 24 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 27, -149 )
@@ -436,11 +582,11 @@ GRAVITY = 750
 JUMP_FORCE = 750
 
 [node name="BodyguardPortrait" parent="." instance=ExtResource( 14 )]
-position = Vector2( 3968.86, -1440.65 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 3932, -1443 )
+character = "BodyGuard"
 
 [node name="CollisionShape2D" parent="BodyguardPortrait" index="0"]
-position = Vector2( -2, -5 )
+position = Vector2( 0.000244141, -3.49988 )
 
 [node name="Sprite" parent="BodyguardPortrait" index="1"]
 texture = ExtResource( 13 )
@@ -451,42 +597,43 @@ scale = Vector2( 0.690001, 0.74 )
 texture = ExtResource( 12 )
 
 [node name="CampaignManagerPortrait" parent="." instance=ExtResource( 14 )]
-position = Vector2( 352, -3776 )
+position = Vector2( 412, -3756 )
+character = "CampaignManager"
 
 [node name="CollisionShape2D" parent="CampaignManagerPortrait" index="0"]
 position = Vector2( 0, 3 )
 
-[node name="Sprite" parent="CampaignManagerPortrait" index="1"]
-position = Vector2( 2.99997, 2 )
-scale = Vector2( 0.625, 0.625 )
-texture = ExtResource( 13 )
-
 [node name="Sprite2" type="Sprite" parent="CampaignManagerPortrait"]
-position = Vector2( -0.749996, -28.75 )
-scale = Vector2( 0.435833, 0.435833 )
+position = Vector2( -9, -36.0001 )
+scale = Vector2( 0.7, 0.720458 )
 texture = ExtResource( 19 )
 
+[node name="Sprite" parent="CampaignManagerPortrait" index="2"]
+position = Vector2( 2.99997, 2 )
+texture = ExtResource( 13 )
+
 [node name="WifePortrait" parent="." instance=ExtResource( 14 )]
-position = Vector2( 6090, -3817 )
+position = Vector2( 6120, -3641 )
+character = "Wife"
 
 [node name="Sprite" parent="WifePortrait" index="1"]
 texture = ExtResource( 13 )
 
 [node name="Sprite2" type="Sprite" parent="WifePortrait"]
 
-[editable path="BodyguardSpotted"]
-[editable path="Briefcase"]
+[editable path="ReporterTestimony"]
+[editable path="ProtesterTestimony"]
 [editable path="MayorTimeline"]
+[editable path="EventPhoto"]
+[editable path="CarCompartment"]
 [editable path="Bullet"]
-[editable path="TrunkCompartment"]
-[editable path="PodiumMoved"]
-[editable path="Protester"]
-[editable path="RefreshmentClue"]
+[editable path="PodiumChange"]
 [editable path="ReporterPhoto"]
-[editable path="WifeCar"]
-[editable path="SniperClue"]
-[editable path="Calllog"]
-[editable path="SuitcaseSpotted"]
+[editable path="CallLog"]
+[editable path="RefreshmentTable"]
+[editable path="SniperTestimony"]
+[editable path="SuitcaseDiscrepency"]
+[editable path="AssassinPlot"]
 [editable path="BodyguardPortrait"]
 [editable path="CampaignManagerPortrait"]
 [editable path="WifePortrait"]
