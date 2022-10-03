@@ -626,7 +626,10 @@ scale = Vector2( 0.181604, 0.181604 )
 texture = ExtResource( 24 )
 
 [node name="BodyguardPortrait" parent="." instance=ExtResource( 14 )]
-position = Vector2( 3951, -1555 )
+position = Vector2( 3976, -1464 )
+__meta__ = {
+"_edit_group_": true
+}
 character = "Bodyguard"
 
 [node name="CollisionShape2D" parent="BodyguardPortrait" index="0"]
