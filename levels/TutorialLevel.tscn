@@ -52,10 +52,10 @@ extents = Vector2( 329.25, 2294 )
 script = ExtResource( 4 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = -8265.0
+margin_left = -493.0
 margin_top = -4791.0
-margin_right = 12023.0
-margin_bottom = 6976.0
+margin_right = 7248.0
+margin_bottom = 651.0
 texture = ExtResource( 2 )
 stretch_mode = 2
 
@@ -604,7 +604,7 @@ scale = Vector2( 0.179592, 0.179592 )
 texture = ExtResource( 23 )
 
 [node name="AssassinPlotClue" parent="." instance=ExtResource( 3 )]
-position = Vector2( -48, -3532 )
+position = Vector2( 92, -3551 )
 clue_name = "AssassinPlot"
 
 [node name="AssassinPlot" parent="." instance=ExtResource( 5 )]
