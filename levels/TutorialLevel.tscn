@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/art/interview/cork.jpg" type="Texture" id=2]
@@ -34,6 +34,10 @@
 [ext_resource path="res://assets/levelitems/corkboardpicture4.png" type="Texture" id=32]
 [ext_resource path="res://assets/fonts/Marker44.tres" type="DynamicFont" id=33]
 [ext_resource path="res://menu/Marker.tres" type="Theme" id=34]
+[ext_resource path="res://assets/cluenotes/ConnectHint.png" type="Texture" id=35]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 93, 94.5 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 582.5, 81 )
@@ -102,6 +106,19 @@ position = Vector2( 6238, -2609 )
 scale = Vector2( 0.242333, 0.242333 )
 texture = ExtResource( 28 )
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Decorations"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Decorations/StaticBody2D"]
+position = Vector2( 218, -420.5 )
+shape = SubResource( 6 )
+
+[node name="ConnectHint" type="Sprite" parent="Decorations/StaticBody2D"]
+position = Vector2( 215, -421 )
+scale = Vector2( 0.104357, 0.104357 )
+texture = ExtResource( 35 )
+
 [node name="StaticObjects" type="Node2D" parent="."]
 position = Vector2( -16.966, 0 )
 
@@ -148,7 +165,7 @@ position = Vector2( 563.5, 104 )
 shape = SubResource( 1 )
 
 [node name="FloorTape4" type="StaticBody2D" parent="StaticObjects"]
-position = Vector2( 499, -600 )
+position = Vector2( 1654.97, -556 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape4"]
@@ -486,7 +503,7 @@ scale = Vector2( 0.199592, 0.199592 )
 texture = ExtResource( 11 )
 
 [node name="EventPhotoClue" parent="." instance=ExtResource( 3 )]
-position = Vector2( 801, -682 )
+position = Vector2( 1941, -658 )
 clue_name = "EventPhoto"
 
 [node name="EventPhoto" parent="." instance=ExtResource( 5 )]
@@ -598,8 +615,14 @@ scale = Vector2( 0.180456, 0.180456 )
 texture = ExtResource( 25 )
 
 [node name="SuitcaseDiscrepencyClue" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4458, -1202 )
+position = Vector2( 3354, -1226 )
 clue_name = "SuitcaseDiscrepency"
+
+[node name="CollisionShape2D" parent="SuitcaseDiscrepencyClue" index="0"]
+disabled = true
+
+[node name="Sprite" parent="SuitcaseDiscrepencyClue" index="1"]
+visible = false
 
 [node name="SuitcaseDiscrepency" parent="." instance=ExtResource( 5 )]
 position = Vector2( 2649, -1521 )
@@ -612,8 +635,14 @@ scale = Vector2( 0.179592, 0.179592 )
 texture = ExtResource( 23 )
 
 [node name="AssassinPlotClue" parent="." instance=ExtResource( 3 )]
-position = Vector2( 92, -3551 )
+position = Vector2( 912, -3527 )
 clue_name = "AssassinPlot"
+
+[node name="CollisionShape2D" parent="AssassinPlotClue" index="0"]
+disabled = true
+
+[node name="Sprite" parent="AssassinPlotClue" index="1"]
+visible = false
 
 [node name="AssassinPlot" parent="." instance=ExtResource( 5 )]
 position = Vector2( 4897, -1670 )
@@ -725,7 +754,9 @@ JUMP_FORCE = 750
 [editable path="CallLog"]
 [editable path="RefreshmentTable"]
 [editable path="SniperTestimony"]
+[editable path="SuitcaseDiscrepencyClue"]
 [editable path="SuitcaseDiscrepency"]
+[editable path="AssassinPlotClue"]
 [editable path="AssassinPlot"]
 [editable path="BodyguardPortrait"]
 [editable path="CampaignManagerPortrait"]

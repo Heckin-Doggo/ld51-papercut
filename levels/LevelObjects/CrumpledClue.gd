@@ -16,3 +16,7 @@ func obtain_clue(body):
 		visible = false
 		yield($Pickup, "finished")
 		queue_free()
+
+func enable():
+	$Sprite.visible = true
+	$CollisionShape2D.call_deferred("set_disabled", false)

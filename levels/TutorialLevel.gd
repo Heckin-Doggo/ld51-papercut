@@ -85,8 +85,10 @@ func onInterviewFinished(status, person):
 		match person:
 			"Bodyguard":
 				passed["Bodyguard"] = true
+				$SuitcaseDiscrepencyClue.enable()
 			"Manager": 
 				passed["CampaignManager"] = true
+				$AssassinPlotClue.enable()
 			"Wife": 
 				passed["Wife"] = true
 	check_completion()
