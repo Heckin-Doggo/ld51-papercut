@@ -63,7 +63,7 @@ func start_interview(person):
 		"CampaignManager":
 			run_interview_obj("res://interviews/campaignManagerInterview.json")
 		"Wife":
-			print("TODO: Add link to Wife Interview")
+			run_interview_obj("res://interviews/wifeInterview.json")
 	# TODO: Lock the player.
 
 func run_interview_obj(path):
