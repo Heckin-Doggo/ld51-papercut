@@ -43,7 +43,7 @@ func _ready():
 #	$Detective.visible = false
 
 func play_cutscene():
-#	Slide.texture = load("res://assets/art/cutscenes/Start1.jpg")
+	Slide.texture = load("res://assets/art/cutscene/Start1.jpg")
 	pass
 	# TODO: Fix this shit
 
