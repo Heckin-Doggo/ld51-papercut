@@ -13,12 +13,15 @@ var input_dir = 0
 #the actual velocity of the player
 var velocity = Vector2(0, GRAVITY)
 
+var grappling = false
 #if a hook is connected
 var hook_connected = false
 #position of connected hook
 var current_hook
 #the string connecting the hook
 var string
+
+onready var sprite = $Sprite
 
 var Grapple = preload("res://scenes/GrappleShot.tscn")
 
@@ -63,8 +66,24 @@ func move(delta):
 	#actually moves the player
 	velocity = move_and_slide(new_velocity, Vector2.UP)
 
+func _process(_delta):
+	if velocity.x < 0:
+		sprite.flip_h = true
+	else:
+		sprite.flip_h = false
+	
+	if grappling and hook_connected:
+		sprite.animation = "Swinging"
+	elif grappling:
+		sprite.animation = "Grappling"
+	elif velocity.x != 0:
+		sprite.animation = "Walking"
+	else:
+		sprite.animation = "Idle"
+
 #Shoots a grappling hook projectile and connects it to the player
 func shoot_hook(direction):
+	grappling = true
 	#make the object
 	var grapple = Grapple.instance()
 	#connect functions for when projectile connects to a surface
@@ -85,6 +104,7 @@ func connect_hook():
 
 #Disconnects the current hook
 func disconnect_hook():
+	grappling = false
 	#tells player that no hook is connected
 	hook_connected = false
 	#deletes the old hook

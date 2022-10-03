@@ -598,14 +598,14 @@ character = "CampaignManager"
 [node name="CollisionShape2D" parent="CampaignManagerPortrait" index="0"]
 position = Vector2( 0, 3 )
 
+[node name="Sprite" parent="CampaignManagerPortrait" index="1"]
+position = Vector2( 2.99997, 2 )
+texture = ExtResource( 13 )
+
 [node name="Sprite2" type="Sprite" parent="CampaignManagerPortrait"]
 position = Vector2( -9, -36 )
 scale = Vector2( 0.7, 0.720458 )
 texture = ExtResource( 19 )
-
-[node name="Sprite" parent="CampaignManagerPortrait" index="2"]
-position = Vector2( 2.99997, 2 )
-texture = ExtResource( 13 )
 
 [node name="WifePortrait" parent="." instance=ExtResource( 14 )]
 position = Vector2( 6120, -3641 )
