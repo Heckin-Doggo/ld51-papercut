@@ -19,7 +19,7 @@ font_data = ExtResource( 4 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 8 )
-interviewPath = "res://interviews/bodyguardInterview.json"
+interviewPath = "res://interviews/campaignManagerInterview.json"
 
 [node name="Cork" type="Sprite" parent="."]
 position = Vector2( 672, 313 )
