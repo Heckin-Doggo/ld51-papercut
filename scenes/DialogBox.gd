@@ -22,6 +22,7 @@ onready var Dialog = get_node("TextBackground/Dialog")
 
 # signal
 signal finished
+signal phraseFinished
 
 func _ready():
 	$Timer.wait_time = textSpeed
@@ -88,6 +89,7 @@ func nextPhrase() -> void:
 		$Picture.texture = load("res://assets/art/portraits/Invalid.png")
 		
 	# TODO: update tick sound.
+	f = File.new()
 	var tick = "res://assets/sfx/dialog/" + dialog[phraseNum]["Name"] + ".wav"
 	if f.file_exists(img):
 		$DialogTick.stream = load(tick)
@@ -102,6 +104,7 @@ func nextPhrase() -> void:
 		$Timer.start()
 		yield($Timer, "timeout")
 	
+	emit_signal("phraseFinished")
 	finished = true
 	phraseNum += 1
 	return

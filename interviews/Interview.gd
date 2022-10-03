@@ -20,7 +20,7 @@ var dialogBox = preload("res://scenes/DialogBox.tscn")
 # currently shown view
 var currentView = null
 
-var ready = true
+var ready = false
 
 
 
@@ -104,11 +104,14 @@ func nextPhrase():
 			dialog(token)
 		"Log": 
 			phraseNum += 1
-			yield(get_tree().create_timer(5), "timeout")
+			yield(get_tree().create_timer(2), "timeout")
+			print("ready")
+			ready = true
 		"Choice": 
 			phraseNum += 1
 			yield(get_tree().create_timer(5), "timeout")
-			emit_signal("completed")
+			print("ready")
+			ready = true
 		"FailDialog":
 			phraseNum += 1
 			
@@ -118,6 +121,14 @@ func nextPhrase():
 			phraseNum += 1
 	
 func dialog(token):
+	# setup scene
+	if currentView:
+		currentView.visible = false
+	
+	currentView = get_node(token["View"])
+	currentView.visible = true
+	
+	# dialog box
 	var dialogInst = dialogBox.instance()
 	dialogInst.oneshotSpeaker = token["Name"]
 	dialogInst.oneshotString = token["Text"]
@@ -125,6 +136,6 @@ func dialog(token):
 	
 	$CanvasLayer.add_child(dialogInst)
 	
-	yield(dialogInst, "finished")
+	yield(dialogInst, "phraseFinished")
 	print("ready")
 	ready = true
