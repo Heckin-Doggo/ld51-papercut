@@ -2,8 +2,10 @@ extends Node2D
 
 onready var camera = $EventCamera
 onready var Globals = get_node("/root/Global")
+onready var Music = get_node("/root/Music")
 
 func _ready():
+	Music.change_song("Jazz")
 	$ReporterTestimonyClue.connect("clue_obtained", self, "activate_platform")
 	$ProtesterTestimonyClue.connect("clue_obtained", self, "activate_platform")
 	$MayorTimeLineClue.connect("clue_obtained", self, "activate_platform")
