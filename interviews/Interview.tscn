@@ -24,11 +24,13 @@ interviewPath = "res://interviews/bodyguardInterview.json"
 [node name="Cork" type="Sprite" parent="."]
 position = Vector2( 672, 313 )
 scale = Vector2( 0.375667, 0.375667 )
+z_index = -1
 texture = ExtResource( 7 )
 
 [node name="Detective" type="Node2D" parent="."]
 visible = false
 position = Vector2( 6.10352e-05, 3.05176e-05 )
+z_index = -1
 
 [node name="Detective" type="Sprite" parent="Detective"]
 position = Vector2( 660, 360 )
@@ -37,6 +39,7 @@ texture = ExtResource( 9 )
 
 [node name="Suspect" type="Node2D" parent="."]
 visible = false
+z_index = -1
 
 [node name="PictureBorder" type="Sprite" parent="Suspect"]
 position = Vector2( 682.167, 275 )
@@ -66,6 +69,7 @@ valign = 1
 
 [node name="Both" type="Node2D" parent="."]
 visible = false
+z_index = -1
 
 [node name="Detective" type="Sprite" parent="Both"]
 position = Vector2( 259, 349 )
@@ -95,7 +99,9 @@ text = "Placeholder"
 align = 1
 valign = 1
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
 
 [node name="EvidenceSelect" type="Control" parent="CanvasLayer"]
 visible = false
@@ -131,6 +137,7 @@ theme = ExtResource( 6 )
 text = "Hello World"
 align = 1
 valign = 1
+autowrap = true
 
 [node name="1" type="TextureButton" parent="CanvasLayer/EvidenceSelect"]
 visible = false
@@ -156,6 +163,7 @@ theme = ExtResource( 6 )
 text = "Hello World"
 align = 1
 valign = 1
+autowrap = true
 
 [node name="2" type="TextureButton" parent="CanvasLayer/EvidenceSelect"]
 visible = false
@@ -178,6 +186,7 @@ margin_top = 15.0
 margin_right = -22.0
 margin_bottom = -45.0
 theme = ExtResource( 6 )
-text = "Hello World"
+text = "Hello World! What a wonderful world it is isnt it? I love big text!"
 align = 1
 valign = 1
+autowrap = true

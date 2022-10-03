@@ -1,26 +1,106 @@
 [
-    {"type": "Begin", "Suspect": "Manager", "Image": "Default"},
-    {"Type": "Restart", "View": "Both", "Name": "Manager", "Image": "Confused", "Text": ""},
+    {"Type": "Begin", "Suspect": "Manager", "Image": "Default"},
+    {"Type": "Restart", "View": "Both", "Name": "Manager", "Image": "Confused", "Text": "Hello, citiz- hey, wait a minute, weren't you the one just here accusing me of things?"},
 
     {"Type": "Dialog", "View": "Both", "Name": "Detective", "Image": "Default",
     "Text": "(The mayor's campaign manager was half his age, with probably half the sense. He was a recent graduate looking to boost his resume, and he didn't let anything get in his way. Not tradition, red tape, or common sense.)"},
     {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Default", "Text": "Hello, citizen. Are you by change registered to vote?"},
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "I've already cast my ballot but for a different race. The race to figure out who ended the mayor's. And my vote's for you."},
     {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Accused", "Text": "Me? Kill my own candidate?"},
-    {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Mad", "Text": "Everything I do if for the good of this country! I'd never turn my back on it."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Mad", "Text": "Everything I do i for the good of this country! I'd never turn my back on it."},
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "In my mind, the only platform a politician's got is lies. And you seem to have plenty."},
 
     {"Type": "Choice", "Options": [
-        {"Requires": "ProtesterTestimony", "Correct": false, "Text": "Bring up the protestor's testimony.", "Dialog": [
-            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Take a look at this."},
+        {"Requires": "ReporterTestimony", "Correct": false, "Text": "Bring up the reporter's testimony.", "Dialog": "default"},
+        {"Requires": "ProtesterTestimony", "Correct": true, "Text": "Bring up the protester's testimony."},
+        {"Requires": "ReporterPhoto", "Correct": false, "Text": "Bring up the reporter's photo.", "Dialog": "default"}
+    ]},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "I have a reliable source that said they saw you near the car, where the murder weapon was stashed."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Perhaps you wanted to bring the road to re-election to an abrupt end?"},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Accused", "Text": "What? Who said that?"},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "A protester on the scene."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Confused", "Text": "You'd take a deluded hippie's word over mine? I doubt they've ever paid a tax dollar in their life."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Neutral", "Text": "I'll admit I was by the car, but I was just taking a quick phone call! I wanted to be out of the way."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "That's impossible."},
+    {"Type": "Choice", "Options": [
+        {"Requires": "Bullet", "Correct": false, "Text": "Bring up the bullet on scene.", "Dialog": [
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Show", "Text": "Take a look at this."},
             {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Confused", "Text": "That's your big evidence! Ha! Pathetic!"},
             {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Maybe I'm following the wrong lead here...)"}
         ]},
-        {"Requires": "ReporterTestimony", "Correct": true, "Text": "Bring up the reporter's testimony."},
-        {"Requires": "ReporterPhoto", "Correct": false, "Text": "Bring up the reporter's photo.", "Dialog": [
-            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Take a look at this."},
+        {"Requires": "CallLog", "Correct": true, "Text": "Bring up the call logs."},
+        {"Requires": "RefreshmentTable", "Correct": false, "Text": "Bring up the refreshment table.", "Dialog": [
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Show", "Text": "Take a look at this."},
             {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Confused", "Text": "That's your big evidence! Ha! Pathetic!"},
             {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Maybe I'm following the wrong lead here...)"}
         ]}
     ]},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Show", "Text": "The call log paints a nice picture, and it's not one you look good in. You didn't make a single call that day."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Suspicious", "Text": "Must have been some glitch. I was definitely taking a call! I bet the bodyguard even saw me."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "I don't deny you made a phone call, but I think you used another cell phone."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Whoever you were calling, you didn't want the mayor to know. Or anyone, for that matter."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Mad", "Text": "So what? You think I have a side piece? Or I was two-timing with the opposition?"},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "I have another idea..."},
+    {"Type": "Choice", "Options": [
+        {"Requires": "EventPhoto", "Correct": false, "Text": "Show a photo of the event.", "Dialog": [
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Show", "Text": "Take a look at this."},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Confused", "Text": "That's your big evidence! Ha! Pathetic!"},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Maybe I'm following the wrong lead here...)"}
+        ]},
+        {"Requires": "Bullet", "Correct": true, "Text": "Bring up the bullet on scene."},
+        {"Requires": "MayorTimeline", "Correct": false, "Text": "Bring up the murder timeline.", "Dialog": [
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Show", "Text": "Take a look at this."},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Confused", "Text": "That's your big evidence! Ha! Pathetic!"},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Maybe I'm following the wrong lead here...)"}
+        ]}
+    ]},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "You have friends in high places, fella. And I mean really high."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Like the sniper watching the events from an apartment across the square."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Show", "Text": "I know someone was firing on the crowd, cause we found a bullet in the remains of the suitcase."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "You were making sure he was in position to take a shot on the mayor."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Suspicious", "Text": "A sniper? Of all the muckraking I've seen, this is another level."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Neutral", "Text": "I took a law class in high school, you know. You'll have to do better than some circumstantial evidence."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Suspicious", "Text": "Maybe I made a phone call on a burner number, and maybe a sniper was attending the event."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Mad", "Text": "But what have you got linking us? Zilch. Nada."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Suspicious", "Text": "So show me some evidence I actually knew about that sniper and we'll talk."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "I think I have just the thing..."},
+    {"Type": "Choice", "Options": [
+        {"Requires": "ReporterPhoto", "Correct": false, "Text": "Show a photo of the mayor and his wife.", "Dialog": "default"},
+        {"Requires": "PodiumChange", "Correct": true, "Text": "Bring up the Manager moving the mayor before the explosion."},
+        {"Requires": "ReporterTestimony", "Correct": false, "Text": "Bring up the reporter's testimony.", "Dialog": [
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Show", "Text": "So this reporter said you were doing some things..."},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Confused", "Text": "That's your big evidence! Ha! Pathetic!"},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Maybe I'm following the wrong lead here...)"}
+        ]}
+    ]},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "You made a strange decision before the explosion. One that only makes sense to a twisted mind."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "You had the mayor move his podium a little to the left, off-center."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "The crowd could already see him, so that's not the issue. But what if you were worried about another guest?"},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Suspicious", "Text": "You mean...this sniper?"},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "I believe there was a flag on the right side of the stage that was flying at the time of the incident."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "If the wind was blowing just right, it could have blocked the mayor from view."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Not even the most skilled sniper can shoot a target they can't see."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "So when you heard about this, you had no choice but to move the mayor into the sniper's sight."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "That's the only way this all makes sense."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Accused", "Text": "Ughh...rats! Fine, you got me."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Worried", "Text": "But don't get me wrong. I didn't want to kill him! The sniper was just supposed to hit the briefcase!"},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Worried", "Text": "I didn't think it would explode."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Then...what was your plan here?"},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Confused", "Text": "The mayor's always getting flack for being wimpy. He's not like me, who can hit the gym every morning."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Neutral", "Text": "He's getting on in years, and some say he's even getting complacent."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Default", "Text": "For him to stand a chance, I had to prove he was strong!"},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Default", "Text": "And what better way than to stage an assassination attempt for him to survive!"},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "I'm no politician, but I can think of quite a few."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Confused", "Text": "Well, not everyone can shoot for the stars."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Default", "Text": "Just wait till I'm representing you in Congress! You'll understand my brilliance then!"},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(I guess folks had a point when they talked about age before beauty. But it doesn't seem like he had anything to do with the bomb. Looks like it's back to the drawing board.)"},
+
+    {"Type": "FailDialog", "View": "Detective", "Name": "Detective", "Image": "Show", "Text": "Take a look at this."},
+    {"Type": "FailDialog", "View": "Suspect", "Name": "Manager", "Image": "Confused", "Text": "That's your big evidence! Ha! Pathetic!"},
+    {"Type": "FailDialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Well, excuse you. I thought it was pretty nice myself."},
+    {"Type": "FailDialog", "View": "Suspect", "Name": "Manager", "Image": "Default", "Text": "That would never stand up in court! Just get any of my dad's lawyers on the phone and they'll tell you."},
+    {"Type": "FailDialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "I don't need the law. I just need the truth."},
+    {"Type": "FailDialog", "View": "Suspect", "Name": "Manager", "Image": "Confused", "Text": "You want the truth? You're a complete idiot!"},
+    {"Type": "FailDialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Ugh, that's embarrassing. To be called a clown by this prince of fools...Maybe I need to step back from this.)"}
+
 ]

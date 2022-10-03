@@ -625,7 +625,7 @@ texture = ExtResource( 24 )
 
 [node name="BodyguardPortrait" parent="." instance=ExtResource( 14 )]
 position = Vector2( 3932, -1443 )
-character = "BodyGuard"
+character = "Bodyguard"
 
 [node name="CollisionShape2D" parent="BodyguardPortrait" index="0"]
 position = Vector2( 0.000244141, -3.49988 )
@@ -672,6 +672,8 @@ scale = Vector2( 1.5, 1.5 )
 MOVE_SPEED = 500
 GRAVITY = 750
 JUMP_FORCE = 750
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [editable path="ReporterTestimony"]
 [editable path="ProtesterTestimony"]

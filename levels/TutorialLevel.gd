@@ -4,6 +4,10 @@ onready var camera = $EventCamera
 onready var Globals = get_node("/root/Global")
 onready var Music = get_node("/root/Music")
 
+var Interview = preload("res://interviews/Interview.tscn")
+
+var interview_running = false
+
 func _ready():
 	Music.change_song("Jazz")
 	$ReporterTestimonyClue.connect("clue_obtained", self, "activate_platform")
@@ -20,6 +24,13 @@ func _ready():
 	$SuitcaseDiscrepencyClue.connect("clue_obtained", self, "activate_platform")
 	$AssassinPlotClue.connect("clue_obtained", self, "activate_platform")
 	camera.connect("tween_finished", self, "reset_camera")
+	
+	$BodyguardPortrait.connect("start_interrogation", self, "start_interview")
+	$CampaignManagerPortrait.connect("start_interrogation", self, "start_interview")
+	$WifePortrait.connect("start_interrogation", self, "start_interview")
+	
+	
+	
 
 func activate_platform(clue):
 	print(clue)
@@ -31,3 +42,25 @@ func activate_platform(clue):
 
 func reset_camera():
 	$Player.activate_camera()
+	
+func start_interview(person):
+	match person:
+		"Bodyguard":
+			run_interview_obj("res://interviews/bodyguardInterview.json")
+		"CampaignManager":
+			run_interview_obj("res://interviews/campaignManagerInterview.json")
+		"Wife":
+			print("TODO: Add link to Wife Interview")
+	# TODO: Lock the player.
+
+func run_interview_obj(path):
+	if not interview_running:
+		interview_running = true
+		var interviewInst = Interview.instance()
+		interviewInst.interviewPath = path
+		$CanvasLayer.add_child(interviewInst)
+		
+		yield(interviewInst, "finished")  # don't do anything til interview says its done.
+		yield(get_tree().create_timer(5), "timeout") # debounce of sorts?
+		interview_running = false
+		Music.change_song("Jazz")

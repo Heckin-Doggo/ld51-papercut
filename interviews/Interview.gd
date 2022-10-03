@@ -152,9 +152,18 @@ func nextPhrase():
 			dialog(token)
 		"Log": 
 			phraseNum += 1
-			yield(get_tree().create_timer(2), "timeout")
-			print("ready")
-			ready = true
+			
+			var log_token = {
+				"Type": "Dialog",
+				"View": "Detective",
+				"Name": "Clue",
+				"Image": "Default",
+				"Text": token["Text"]
+			}
+			
+			Global.evidence["Data"] = true
+			
+			dialog(log_token)
 		"Choice": 
 			# TODO: Do we want to advance yet? We need to re-reference.
 #			phraseNum += 1
@@ -211,7 +220,7 @@ func nextPhrase():
 				return
 			# else
 			var choiceDialog = actual_options[selectedOption]["Dialog"]
-			if choiceDialog == "default":
+			if typeof(choiceDialog) == TYPE_STRING and choiceDialog == "default":
 				jumpToFail()
 				return
 			# else
