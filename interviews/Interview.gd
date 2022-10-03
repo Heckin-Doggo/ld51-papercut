@@ -30,6 +30,12 @@ func _ready():
 	interview = getInterview()
 	assert(interview, "Interview not found.")
 	initInterview()
+	
+	# init buttons
+	for i in range(3):
+		var optionButton = EvidenceSelect.get_node(str(i))
+		optionButton.connect("pressed", self, "onOptionPressed")
+	
 	nextPhrase()
 
 
@@ -129,6 +135,8 @@ func nextPhrase():
 				optionButton.visible = true
 				
 				optionButton.connect("pressed", self, "onOptionPressed")
+			
+			
 			
 		"FailDialog":
 			phraseNum += 1
