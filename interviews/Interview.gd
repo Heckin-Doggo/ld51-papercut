@@ -179,7 +179,9 @@ func nextPhrase():
 			
 			for option in options:
 				var require = option["Requires"]
-				if Global.evidence[require]:  # if its in evidence list.
+				if require == "":
+					actual_options.append(option)
+				elif Global.evidence[require]:  # if its in evidence list.
 					actual_options.append(option)
 			
 			if len(actual_options) == 0:

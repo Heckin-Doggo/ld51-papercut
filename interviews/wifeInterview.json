@@ -16,25 +16,30 @@
     {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Confused", "Text": "I spent all day preparing for the event. I hardly had time for trouble."},
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "I think you're the kind of person who always has room for trouble in their schedule..."},
     {"Type": "Choice", "Options": [
-        {"Requires": "SniperTestimony", "Correct": true, "Text": "Bring up the sniper's testimony."},
         {"Requires": "ProtesterTestimony", "Correct": false, "Text": "Bring up the protester's testimony.", "Dialog": "default"},
-        {"Requires": "ReporterTestiomony", "Correct": false, "Text": "Bring up the reporter's testimony.", "Dialog": "default"}
+        {"Requires": "ReporterTestimony", "Correct": false, "Text": "Bring up the reporter's testimony.", "Dialog": "default"},
+        {"Requires": "SniperTestimony", "Correct": true, "Text": "Bring up the sniper's testimony."}
     ]},
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "You may not be aware, but the campaign manager hired a sniper to shoot at the mayor."},
     {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Confused", "Text": "Really, now? And you're not arresting him?"},
-    
-
-    
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "You need at least five brain cells to plot a real murder, and he's about two short."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "No, that as a publicity stunt. But the point is, his sniper had a good vantage point of the backstage."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "And he saw you messing with the trunk of the car right before the murder. Right where the suitcase was."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Confused", "Text": "So what? Right before the explosion, you said?"},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Worried", "Text": "The suitcase was already on the stage then. I couldn't have touched it then"},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Mad", "Text": "I may have been looking at the trunk, but it can't be relevant."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Not if you flip this mystery around."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(What was the wife doing in the trunk?)"},
     {"Type": "Choice", "Options": [
-        {"Requires": "Bullet", "Correct": false, "Text": "Bring up the bullet on scene.", "Dialog": [
+        {"Requires": "", "Correct": false, "Text": "She was planting a bomb.", "Dialog": [
             {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Show", "Text": "Take a look at this."},
-            {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Confused", "Text": "That's your big evidence! Ha! Pathetic!"},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Confused", "Text": "That's your big evidence! Ha! Pathetic!"},
             {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Maybe I'm following the wrong lead here...)"}
         ]},
-        {"Requires": "CallLog", "Correct": true, "Text": "Bring up the call logs."},
-        {"Requires": "RefreshmentTable", "Correct": false, "Text": "Bring up the refreshment table.", "Dialog": [
+        {"Requires": "SuitecaseDiscrepency", "Correct": true, "Text": "She was hiding a suitcase."},
+        {"Requires": "", "Correct": false, "Text": "She was calling a sniper.", "Dialog": [
             {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Show", "Text": "Take a look at this."},
-            {"Type": "Dialog", "View": "Suspect", "Name": "Manager", "Image": "Confused", "Text": "That's your big evidence! Ha! Pathetic!"},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Confused", "Text": "That's your big evidence! Ha! Pathetic!"},
             {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Maybe I'm following the wrong lead here...)"}
         ]}
     ]},
