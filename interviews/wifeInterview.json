@@ -32,15 +32,29 @@
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(What was the wife doing in the trunk?)"},
     {"Type": "Choice", "Options": [
         {"Requires": "", "Correct": false, "Text": "She was planting a bomb.", "Dialog": [
-            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Show", "Text": "Take a look at this."},
-            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Confused", "Text": "That's your big evidence! Ha! Pathetic!"},
-            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Maybe I'm following the wrong lead here...)"}
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "See, you weren't putting a bomb in that suitcase. You were actually planting a bomb."},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Confused", "Text": "What? I thought you were going to turn this case around."},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "I am. See, we thought the bomb was on the stage with the mayor, but it was actually in the trunk of his car."},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "It just launched a missile onto the stage, where he was standing."},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Confused", "Text": "Look, I'm more of a housewife than an event planner, really."},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Confused", "Text": "I'm glad you think I could fix up something like that, but I really can't!"},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Suspicious", "Text": "Besides, surely the sniper would have seen the missile flying, right?"},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "That was just another part of your plan. You used an invisible missile."},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Suspicious", "Text": "Listen, are you really a private eye?"},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Suspicious", "Text": "Cause I'm starting to think you're just three kids in a trenchcoat stacked on top of each other."},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(She's on to me...I should back off and rethink this.)"}
         ]},
         {"Requires": "SuitcaseDiscrepency", "Correct": true, "Text": "She was hiding a suitcase."},
         {"Requires": "", "Correct": false, "Text": "She was calling a sniper.", "Dialog": [
-            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Show", "Text": "Take a look at this."},
-            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Confused", "Text": "That's your big evidence! Ha! Pathetic!"},
-            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Maybe I'm following the wrong lead here...)"}
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "The campaign manager wasn't the only one calling a sniper."},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "I bet you called another one too, on the other side of the square."},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "And this one was ready to shoot you husband dead!"},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Confused", "Text": "But then, what about the bomb? Someone had to plant that."},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Simple. You had a third sniper armed with explosive bullets."},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Meanwhile, your other sniper was poised to shoot the campaign manager's sniper."},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "And your fourth sniper-"},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Mad.", "Text": "Stop."},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Maybe I'm getting ahead of myself. What else could she have been up to?)"}
         ]}
     ]},
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "The bodyguard claimed that he saw another suitcase at the same time as the mayor was heading to the stage."},
@@ -102,15 +116,35 @@
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Why did the wife still approach the explosion?)"},
     {"Type": "Choice", "Options": [
         {"Requires": "", "Correct": false, "Text": "It was worth the risk.", "Dialog": [
-            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Show", "Text": "Take a look at this."},
-            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Confused", "Text": "That's your big evidence! Ha! Pathetic!"},
-            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Maybe I'm following the wrong lead here...)"}
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "We touched on it before. You may claim you wouldn't have gotten that close to the blast."},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "But because you did, you're able to make this argument right here."},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "It was all about fixing yourself an alibi."},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Worried", "Text": "Sure, but I nearly lost my eyebrows in that explosion!"},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Suspicious", "Text": "If I wanted to do that, I would have been much safer about it!"},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Worried", "Text": "I could have stopped on the stairs, or even just hung around the refreshment table."},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Suspicious", "Text": "There were much less risky ways to protect myself from danger!"},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "For a normal person, maybe."},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "But I'm willing to bet you were born with an incredible resistance to heat."},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "And every night, you go out fighting evil with your incredible powers of flame!"},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Mad.", "Text": "I suppose you're speaking for yourself, here?"},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Nah. I'm more into dames that lurk in the shadows."},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Mad", "Text": "I wish. Then I could burn off your hair and see if you're still spouting insane tirades."},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(She's right, I don't know what I'm saying anymore. Let's go through it again. What did she not plan for?)"}
         ]},
         {"Requires": "AssassinPlot", "Correct": true, "Text": "The bomb detonated early."},
         {"Requires": "", "Correct": false, "Text": "She wanted to get blown up too.", "Dialog": [
-            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Show", "Text": "Take a look at this."},
-            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Confused", "Text": "That's your big evidence! Ha! Pathetic!"},
-            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Maybe I'm following the wrong lead here...)"}
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "You said it yourself, you loved your husband. Which means you couldn't stand to see him gone."},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "That's why you got up on the stage so you could join him."},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Confused", "Text": "Boy, you've got a dark imagination there. So some kind of death pact?"},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Confused", "Text": "I'll admit I loved him, but not that much!"},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Well, maybe you just wanted to get injured. Maybe get some cool scars."},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "There's a lot of fellas out there who really fall for women with scars. You know, like the type that covers half your face?"},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Especially if it looks like a flame too."},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Mad.", "Text": "I suppose you're speaking for yourself, here?"},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Nah. I'm more into dames that lurk in the shadows."},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Mad.", "Text": "You know, I didn't want to blow myself up before."},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Mad.", "Text": "But this conversation's making the idea more appealing."},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(I think I'm barking up the wrong tree. Let's go through it again. What did she not plan for?)"}
         ]}
     ]},
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "There's one thing you didn't know about. That's the campaign manager's fake assassination plan."},
