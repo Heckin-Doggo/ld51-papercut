@@ -79,13 +79,11 @@ func run_interview_obj(path):
 		Music.change_song("Jazz")
 		yield(get_tree().create_timer(5), "timeout") # debounce of sorts?
 		interview_running = false
-		
+
 func onInterviewFinished(status, person):
 	match person:
 		"Bodyguard":
-			print("locked bodyguard")
 			passed["Bodyguard"] = true
-			print(passed["Bodyguard"])
 		"Manager": 
 			passed["CampaignManager"] = true
 		"Wife": 
