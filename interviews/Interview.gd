@@ -13,6 +13,7 @@ var finished = false
 onready var DetectiveView = get_node("Detective")
 onready var SuspectView = get_node("Suspect")
 onready var BothView = get_node("Both")
+onready var EvidenceSelect = get_node("CanvasLayer/EvidenceSelect")
 
 # spawnable
 var dialogBox = preload("res://scenes/DialogBox.tscn")
@@ -21,6 +22,7 @@ var dialogBox = preload("res://scenes/DialogBox.tscn")
 var currentView = null
 
 var ready = false
+var trigger = false
 
 
 
@@ -33,8 +35,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("ui_accept") and ready:
+	if (Input.is_action_just_pressed("ui_accept") and ready) or trigger:
 		ready = false
+		trigger = false
 		nextPhrase()
 
 
@@ -109,9 +112,24 @@ func nextPhrase():
 			ready = true
 		"Choice": 
 			phraseNum += 1
-			yield(get_tree().create_timer(5), "timeout")
-			print("ready")
-			ready = true
+			# setup scene
+			if currentView:
+				currentView.visible = false
+			currentView = get_node("Both")
+			currentView.visible = true
+			
+			EvidenceSelect.visible = true
+			
+			var options = token["Options"]
+			print(options[0]["Text"])
+			
+			for i in range(3):
+				var optionButton = EvidenceSelect.get_node(str(i))
+				optionButton.get_node("Label").text = options[i]["Text"]
+				optionButton.visible = true
+				
+				optionButton.connect("pressed", self, "onOptionPressed")
+			
 		"FailDialog":
 			phraseNum += 1
 			
@@ -119,7 +137,19 @@ func nextPhrase():
 				dialog(token)
 		_:
 			phraseNum += 1
-	
+
+
+func onOptionPressed():
+	print("clicked!")
+	EvidenceSelect.get_node("0").visible = false
+	EvidenceSelect.get_node("1").visible = false
+	EvidenceSelect.get_node("2").visible = false
+	EvidenceSelect.visible = false
+	trigger = true
+
+
+
+
 func dialog(token):
 	# setup scene
 	if currentView:
@@ -128,9 +158,37 @@ func dialog(token):
 	currentView = get_node(token["View"])
 	currentView.visible = true
 	
+	# give characters their sprite
+	var characterName = token["Name"]
+	if characterName == "Narrator":
+		characterName = "Detective"
+	
+	if characterName == "Detective":
+		var f = File.new()
+		var img = "res://assets/art/interview/" + token["Name"] + token["Image"] + ".png"
+		if f.file_exists(img):
+			DetectiveView.get_node("Detective").texture = load(img)
+			print("load success")
+		else: 
+			DetectiveView.get_node("Detective").texture = load("res://assets/art/portraits/Invalid.png")
+			print("load fail")
+	else:
+		var f = File.new()
+		var img = "res://assets/art/portraits/" + token["Name"] + token["Image"] + ".png"
+		if f.file_exists(img):
+			SuspectView.get_node("PictureBorder/Portrait").texture = load(img)
+			BothView.get_node("PictureBorder/Portrait").texture = load(img)
+		else: 
+			SuspectView.get_node("PictureBorder/Portrait").texture = load("res://assets/art/portraits/Invalid.png")
+			BothView.get_node("PictureBorder/Portrait").texture = load("res://assets/art/portraits/Invalid.png")
+	
+	
+	
+	
+	
 	# dialog box
 	var dialogInst = dialogBox.instance()
-	dialogInst.oneshotSpeaker = token["Name"]
+	dialogInst.oneshotSpeaker = characterName
 	dialogInst.oneshotString = token["Text"]
 	dialogInst.oneshotImage = token["Image"]
 	

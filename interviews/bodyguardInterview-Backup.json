@@ -2,7 +2,7 @@
     {"Type": "Begin", "Suspect": "Bodyguard", "Image": "Default"},
     {"Type": "Restart", "View": "Both", "Name": "Bodyguard", "Image": "Confused", "Text": "What, you again? Didn't I tell you do scram last time?"},
 
-    {"Type": "Dialog", "View": "Both", "Name": "Detective", "Image": "Default", "Text": "(The bodyguard was a goon who looked like he preferred fists to words and seemed anxious to communicate.)"},
+    {"Type": "Dialog", "View": "Both", "Name": "Narrator", "Image": "Default", "Text": "(The bodyguard was a goon who looked like he preferred fists to words and seemed anxious to communicate.)"},
     {"Type": "Dialog", "View": "Both", "Name": "Bodyguard", "Image": "Suspicious", "Text": "What do you want with me?"},
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Call me a bloodhound tracking a scent. And you're smelling real rancid."},
     {"Type": "Dialog", "View": "Suspect", "Name": "Bodyguard", "Image": "Confused", "Text": "The hell does that mean? Is this about the assassination?"},
@@ -14,12 +14,12 @@
         {"Requires": "ProtestorTestimony", "Correct": false, "Text": "Bring up the protestor's testimony.", "Dialog": [
             {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "A protestor told me you and him had a bit of a kerfuffle, is that true?"},
             {"Type": "Dialog", "View": "Suspect", "Name": "Bodyguard", "Image": "Confused", "Text": "That guy? Yeah, I keep the peace, so what of it? It's my job."},
-            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Maybe I'm following the wrong lead here...)"}
+            {"Type": "Dialog", "View": "Detective", "Name": "Narrator", "Image": "Thinking", "Text": "(Maybe I'm following the wrong lead here...)"}
         ]},
         {"Requires": "MayorTimeline", "Correct": false, "Text": "Bring up the timeline of events.", "Dialog": [
             {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "The mayor got up on stage at 11:59, and the explosion happened at 12:00."},
             {"Type": "Dialog", "View": "Suspect", "Name": "Bodyguard", "Image": "Confused", "Text": "Yeah that's true, but what's that got to do with me?"},
-            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(He's right, where was I going with that...?)"}
+            {"Type": "Dialog", "View": "Detective", "Name": "Narrator", "Image": "Thinking", "Text": "(He's right, where was I going with that...?)"}
         ]}
     ]},
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "And he sang a pretty song of filthy deceit. It was about a bodyguard who went snooping around in the trunk of the mayor's car to leave an explosive surprise."},
@@ -37,6 +37,7 @@
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "If you wanted to do a good job, you were a little late."},
     {"Type": "Dialog", "View": "Suspect", "Name": "Bodyguard", "Image": "Confused", "Text": "I don't know why the mayor left without his suitcase. Guess he didn't need it for the speech."},
     {"Type": "Dialog", "View": "Suspect", "Name": "Bodyguard", "Image": "Confused", "Text": "But he didn't have it. It was right there in the car."},
+    {"Type": "Log", "Data": "SuitcaseDiscrepency", "Text": "Something isn't adding up with the suitcases. The Bodyguard claims it was clean when he saw it at 11:58."},
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Sounds like the two of us are seeing a different reality."},
     {"Type": "Choice", "Options": [
         {"Requires": "EventPhoto", "Correct": true, "Text": "Show the photo of the event."},
@@ -52,14 +53,13 @@
     {"Type": "Dialog", "View": "Suspect", "Name": "Bodyguard", "Image": "Worried", "Text": "I admit I thought it was strange...but no one found a suitcase in the car after the incident."},
     {"Type": "Dialog", "View": "Suspect", "Name": "Bodyguard", "Image": "Default", "Text": "I don't quite get it myself, but I know I ain't lying."},
     {"Type": "Dialog", "View": "Suspect", "Name": "Bodyguard", "Image": "Accused", "Text": "You gotta trust me! Not like I had the chance to put a bomb in the mayor's suitcase anyway, if he already had one!"},
-    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(The goon was blowing a lot of smoke, but I sometimes fancied a smoke myself. And this one got me thinking."},
-    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "I didn't smell anything so toxic anymore. I think he told me everything he knew.)"},
-    {"Type": "Log", "Data": "SuitcaseDiscrepency", "Text": "Something isn't adding up with the suitcases. The Bodyguard claims it was clean when he saw it at 11:58, but the mayor already had it. Are there two of them?"},
+    {"Type": "Dialog", "View": "Detective", "Name": "Narrator", "Image": "Thinking", "Text": "(The goon was blowing a lot of smoke, but I sometimes fancied a smoke myself. And this one got me thinking."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Narrator", "Image": "Thinking", "Text": "I didn't smell anything so toxic anymore. I think he told me everything he knew.)"},
 
     {"Type": "FailDialog", "View": "Detective", "Name": "Detective", "Image": "Show", "Text": "Read it and weep, pal."},
     {"Type": "FailDialog", "View": "Suspect", "Name": "Bodyguard", "Image": "Confused", "Text": "What?"},
     {"Type": "FailDialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "It hurts, doesn't it? To see all you lies reduced to smoke?"},
     {"Type": "FailDialog", "View": "Suspect", "Name": "Bodyguard", "Image": "Mad", "Text": "You're clearly smoking something. Now listen, I may be an upstanding citizen, but I got buddies who aren't."},
     {"Type": "FailDialog", "View": "Suspect", "Name": "Bodyguard", "Image": "Mad", "Text": "And unless you really wanna get smoked, get out of my face."},
-    {"Type": "FailDialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Hmm, I think I'm on the right track. Is there something I'm missing?)"}
+    {"Type": "FailDialog", "View": "Detective", "Name": "Narrator", "Image": "Thinking", "Text": "(Hmm, I think I'm on the right track. Is there something I'm missing?)"}
 ]
