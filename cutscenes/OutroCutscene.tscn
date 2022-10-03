@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://cutscenes/OutroCutscene.gd" type="Script" id=1]
+[ext_resource path="res://assets/art/cutscene/Detective.png" type="Texture" id=2]
+[ext_resource path="res://assets/art/cutscene/crumple.png" type="Texture" id=3]
+[ext_resource path="res://assets/art/cutscene/Set.png" type="Texture" id=4]
+[ext_resource path="res://assets/art/cutscene/EndCharger.jpg" type="Texture" id=5]
+
+[node name="OutroCutscene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.203922, 0.203922, 0.203922, 1 )
+
+[node name="BG" type="Sprite" parent="."]
+visible = false
+position = Vector2( 638, 384 )
+scale = Vector2( 0.641167, 0.641167 )
+texture = ExtResource( 4 )
+
+[node name="Detective" type="Sprite" parent="."]
+visible = false
+position = Vector2( 334, 383 )
+texture = ExtResource( 2 )
+
+[node name="Paper" type="Sprite" parent="."]
+visible = false
+position = Vector2( 519, 621 )
+scale = Vector2( 0.209302, 0.209302 )
+texture = ExtResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Slide" type="Sprite" parent="."]
+position = Vector2( 648, 362 )
+scale = Vector2( 0.17791, 0.17791 )
+texture = ExtResource( 5 )

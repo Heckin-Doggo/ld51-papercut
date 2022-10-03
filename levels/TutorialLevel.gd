@@ -85,9 +85,11 @@ func onInterviewFinished(status, person):
 		match person:
 			"Bodyguard":
 				passed["Bodyguard"] = true
-			"Manager": 
+				$SuitcaseDiscrepencyClue.enable()
+			"Manager":
 				passed["CampaignManager"] = true
-			"Wife": 
+				$AssassinPlotClue.enable()
+			"Wife":
 				passed["Wife"] = true
 	check_completion()
 
@@ -96,4 +98,4 @@ func check_completion():
 		finish_game()
 
 func finish_game():
-	pass
+	get_tree().change_scene("res://cutscenes/OutroCutscene.tscn")
