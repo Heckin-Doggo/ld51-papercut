@@ -23,7 +23,7 @@
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "You may not be aware, but the campaign manager hired a sniper to shoot at the mayor."},
     {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Confused", "Text": "Really, now? And you're not arresting him?"},
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "You need at least five brain cells to plot a real murder, and he's about two short."},
-    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "No, that as a publicity stunt. But the point is, his sniper had a good vantage point of the backstage."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "No, that was a publicity stunt. But the point is, his sniper had a good vantage point of the backstage."},
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "And he saw you messing with the trunk of the car right before the murder. Right where the suitcase was."},
     {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Confused", "Text": "So what? Right before the explosion, you said?"},
     {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Worried", "Text": "The suitcase was already on the stage then. I couldn't have touched it then"},
@@ -48,10 +48,13 @@
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "Maybe there were two suitcases."},
     {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Worried", "Text": "Two suitcases? Now you're speaking nonsense!"},
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Nonsense is the perfect mask for brilliance."},
-    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "You knew if the bomb was planted in the mayor's suitcase, we would be watching that suitcase like hawks."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "You knew if the bomb was planted in the mayor's suitcase, we would be watching that suitcase like hawks."},
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "The obvious conclusion was that the killer planted a bomb in it."},
-
-
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "It didn't matter what was in it. The papers would be burned beyond recognizability. We'd never know the difference."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "And the mayor had no reason to open the briefcase. If he did, he'd suspect corporate espionage before murder."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "All you had to do was make sure the original suitcase disappeared."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Mad", "Text": "Now you're just rambling. Maybe I should give you a knock to the head so you stop seeing double."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Suspicious", "Text": "How exactly did I make a suitcase disappear from a crime scene, then? The police searched the place thoroughly."},
 
 
 
