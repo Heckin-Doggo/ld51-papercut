@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Tense.mp3-02187933b5692854a8462543d9dc09ef.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Tense.mp3"
+dest_files=[ "res://.import/Tense.mp3-02187933b5692854a8462543d9dc09ef.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

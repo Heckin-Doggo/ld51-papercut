@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TenseSlower.mp3-448b7af662b331a6f4f6ccd9e05f48f4.mp3str"
+
+[deps]
+
+source_file="res://assets/music/TenseSlower.mp3"
+dest_files=[ "res://.import/TenseSlower.mp3-448b7af662b331a6f4f6ccd9e05f48f4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
