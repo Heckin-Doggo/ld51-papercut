@@ -598,7 +598,7 @@ scale = Vector2( 0.180456, 0.180456 )
 texture = ExtResource( 25 )
 
 [node name="SuitcaseDiscrepencyClue" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4271, -1225 )
+position = Vector2( 4458, -1202 )
 clue_name = "SuitcaseDiscrepency"
 
 [node name="SuitcaseDiscrepency" parent="." instance=ExtResource( 5 )]

@@ -12,6 +12,8 @@ var failed = false
 var restarted = false
 var finished = false
 
+var suspect
+
 # child resources
 onready var DetectiveView = get_node("Detective")
 onready var SuspectView = get_node("Suspect")
@@ -94,7 +96,7 @@ func initInterview():
 	print("Begin")
 	var token = interview[phraseNum];
 	
-	var suspect = token["Suspect"]
+	suspect = token["Suspect"]
 	
 	var f = File.new()
 	var img = "res://assets/art/portraits/" + suspect + token["Image"] + ".png"
@@ -124,8 +126,8 @@ func initInterview():
 		phraseNum += 1
 
 
-func finish():
-	emit_signal("finished")
+func finish(passed):
+	emit_signal("finished", passed, suspect)
 	queue_free()
 
 
@@ -133,7 +135,7 @@ func nextPhrase():
 	if phraseNum >= len(interview): # len(dialog) is the num of JSOn dialog elements.
 		finished = true
 		print("DONE WITH DIALOG")
-		finish()
+		finish(false)
 		return false
 	
 	# get state
@@ -237,7 +239,7 @@ func nextPhrase():
 				dialog(token)
 			else:
 				print("DONE WITH DIALOG - GOOD ENDING!")
-				finish() # SHOULD BE FINE IN GAME
+				finish(true) # SHOULD BE FINE IN GAME
 		_:
 			phraseNum += 1
 

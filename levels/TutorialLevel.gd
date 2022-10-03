@@ -8,6 +8,12 @@ var Interview = preload("res://interviews/Interview.tscn")
 
 var interview_running = false
 
+var passed = {
+	"Bodyguard": false,
+	"CampaignManager": false,
+	"Wife": false
+}
+
 func _ready():
 	Music.change_song("Jazz")
 	$ReporterTestimonyClue.connect("clue_obtained", self, "activate_platform")
@@ -31,6 +37,7 @@ func _ready():
 	
 	
 	
+	
 
 func activate_platform(clue):
 	print(clue)
@@ -44,6 +51,12 @@ func reset_camera():
 	$Player.activate_camera()
 	
 func start_interview(person):
+	print(person, " is trying to start")
+	print(passed[person])
+	if passed[person] == true:
+		print("but it already happened")
+		return  # don't restart finished interviews
+	
 	match person:
 		"Bodyguard":
 			run_interview_obj("res://interviews/bodyguardInterview.json")
@@ -60,8 +73,20 @@ func run_interview_obj(path):
 		interviewInst.interviewPath = path
 		$CanvasLayer.add_child(interviewInst)
 		
+		interviewInst.connect("finished", self, "onInterviewFinished")
+		
 		yield(interviewInst, "finished")  # don't do anything til interview says its done.
 		Music.change_song("Jazz")
 		yield(get_tree().create_timer(5), "timeout") # debounce of sorts?
 		interview_running = false
 		
+func onInterviewFinished(status, person):
+	match person:
+		"Bodyguard":
+			print("locked bodyguard")
+			passed["Bodyguard"] = true
+			print(passed["Bodyguard"])
+		"Manager": 
+			passed["CampaignManager"] = true
+		"Wife": 
+			passed["Wife"] = true
