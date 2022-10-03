@@ -1,12 +1,27 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/art/interview/cork.jpg" type="Texture" id=2]
 [ext_resource path="res://levels/LevelObjects/CrumpledClue.tscn" type="PackedScene" id=3]
 [ext_resource path="res://levels/TutorialLevel.gd" type="Script" id=4]
-[ext_resource path="res://assets/levelitems/Classic-wooden-frame-png.png" type="Texture" id=5]
+[ext_resource path="res://levels/LevelObjects/Platform.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/levelitems/corkboardpicture19.png" type="Texture" id=6]
 [ext_resource path="res://levels/EventCamera.gd" type="Script" id=7]
+[ext_resource path="res://assets/levelitems/Classic-wooden-frame-png.png" type="Texture" id=8]
+[ext_resource path="res://assets/levelitems/corkboardpicture8.png" type="Texture" id=9]
+[ext_resource path="res://assets/cluenotes/bodyguardspottedclue.png" type="Texture" id=10]
+[ext_resource path="res://assets/cluenotes/mayortimelineclue.png" type="Texture" id=11]
+[ext_resource path="res://assets/art/portraits/BodyguardDefault.png" type="Texture" id=12]
+[ext_resource path="res://assets/art/dialog/Border.png" type="Texture" id=13]
+[ext_resource path="res://scenes/Portrait.tscn" type="PackedScene" id=14]
+[ext_resource path="res://assets/cluenotes/bulletclue.png" type="Texture" id=15]
+[ext_resource path="res://assets/cluenotes/hiddencompartmentclue.png" type="Texture" id=16]
+[ext_resource path="res://assets/cluenotes/podiummovedclue.png" type="Texture" id=17]
+[ext_resource path="res://assets/cluenotes/protesterclue.png" type="Texture" id=18]
+[ext_resource path="res://assets/art/portraits/ManagerDefault.png" type="Texture" id=19]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 582.5, 81 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 137.728, 11.2839 )
@@ -20,9 +35,6 @@ extents = Vector2( 3875, 330.75 )
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 329.25, 2294 )
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 582.5, 81 )
-
 [node name="TutorialLevel" type="Node2D"]
 script = ExtResource( 4 )
 
@@ -34,81 +46,399 @@ margin_bottom = 6976.0
 texture = ExtResource( 2 )
 stretch_mode = 2
 
-[node name="LevelBorder" type="StaticBody2D" parent="."]
+[node name="StaticObjects" type="Node2D" parent="."]
+position = Vector2( -16.966, 0 )
 
-[node name="Classic-wooden-frame-png" type="Sprite" parent="LevelBorder"]
+[node name="FloorTape" type="StaticBody2D" parent="StaticObjects"]
+position = Vector2( -153.034, -20 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/FloorTape"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="FloorTape2" type="StaticBody2D" parent="StaticObjects"]
+position = Vector2( 426.966, -21 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape2"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/FloorTape2"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="FloorTape3" type="StaticBody2D" parent="StaticObjects"]
+position = Vector2( 1009.97, -19 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape3"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/FloorTape3"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="FloorTape4" type="StaticBody2D" parent="StaticObjects"]
+position = Vector2( 499, -600 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape4"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/FloorTape4"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="FloorTape5" type="StaticBody2D" parent="StaticObjects"]
+position = Vector2( 1693, -1147 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape5"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/FloorTape5"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="FloorTape6" type="StaticBody2D" parent="StaticObjects"]
+position = Vector2( 3121, -1159 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape6"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/FloorTape6"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="FloorTape7" type="StaticBody2D" parent="StaticObjects"]
+position = Vector2( 1593.97, -14.0001 )
+rotation = 0.495674
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape7"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/FloorTape7"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="FloorTape8" type="StaticBody2D" parent="StaticObjects"]
+position = Vector2( 3698.97, -1162 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape8"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/FloorTape8"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="FloorTape9" type="StaticBody2D" parent="StaticObjects"]
+position = Vector2( 4273.97, -1153 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape9"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/FloorTape9"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="FloorTape10" type="StaticBody2D" parent="StaticObjects"]
+position = Vector2( -146.034, -3470 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape10"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/FloorTape10"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="FloorTape11" type="StaticBody2D" parent="StaticObjects"]
+position = Vector2( 430.966, -3466 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape11"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/FloorTape11"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="FloorTape12" type="StaticBody2D" parent="StaticObjects"]
+position = Vector2( 6349.97, -3362 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape12"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/FloorTape12"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="FloorTape13" type="StaticBody2D" parent="StaticObjects"]
+position = Vector2( 5769.97, -3362 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Corkboardpicture19" type="Sprite" parent="StaticObjects/FloorTape13"]
+position = Vector2( 555, 596 )
+rotation = 0.0506146
+scale = Vector2( 0.476, 0.476 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/FloorTape13"]
+position = Vector2( 563.5, 104 )
+shape = SubResource( 1 )
+
+[node name="LevelBorder" type="StaticBody2D" parent="StaticObjects"]
+
+[node name="Classic-wooden-frame-png" type="Sprite" parent="StaticObjects/LevelBorder"]
 position = Vector2( 3280, -1904 )
 scale = Vector2( 30.634, 30.634 )
-texture = ExtResource( 5 )
+texture = ExtResource( 8 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelBorder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticObjects/LevelBorder"]
 position = Vector2( 3376.83, 612.67 )
 scale = Vector2( 30.634, 30.634 )
 shape = SubResource( 2 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="LevelBorder"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticObjects/LevelBorder"]
 position = Vector2( -502, -2359.5 )
 shape = SubResource( 3 )
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="LevelBorder"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticObjects/LevelBorder"]
 position = Vector2( 3712, -4655.75 )
 shape = SubResource( 4 )
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="LevelBorder"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticObjects/LevelBorder"]
 position = Vector2( 7257.75, -2028 )
 shape = SubResource( 5 )
-
-[node name="FloorTape" type="StaticBody2D" parent="."]
-scale = Vector2( 0.5, 0.5 )
-
-[node name="Corkboardpicture19" type="Sprite" parent="FloorTape"]
-position = Vector2( 555, 596 )
-rotation = 0.0506146
-scale = Vector2( 0.476, 0.476 )
-texture = ExtResource( 6 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FloorTape"]
-position = Vector2( 563.5, 104 )
-shape = SubResource( 1 )
-
-[node name="FloorTape2" type="StaticBody2D" parent="."]
-position = Vector2( 580, -1 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="Corkboardpicture19" type="Sprite" parent="FloorTape2"]
-position = Vector2( 555, 596 )
-rotation = 0.0506146
-scale = Vector2( 0.476, 0.476 )
-texture = ExtResource( 6 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FloorTape2"]
-position = Vector2( 563.5, 104 )
-shape = SubResource( 1 )
-
-[node name="FloorTape3" type="StaticBody2D" parent="."]
-position = Vector2( 1143, 0 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="Corkboardpicture19" type="Sprite" parent="FloorTape3"]
-position = Vector2( 555, 596 )
-rotation = 0.0506146
-scale = Vector2( 0.476, 0.476 )
-texture = ExtResource( 6 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FloorTape3"]
-position = Vector2( 563.5, 104 )
-shape = SubResource( 1 )
 
 [node name="EventCamera" type="Camera2D" parent="."]
 script = ExtResource( 7 )
 
 [node name="Tween" type="Tween" parent="EventCamera"]
 
+[node name="CrumpledClue2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 583, -652 )
+clue_name = "BodyguardSpotted"
+
+[node name="BodyguardSpotted" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1203, -949 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="Sprite" parent="BodyguardSpotted" index="1"]
+position = Vector2( -7, 0 )
+scale = Vector2( 0.172794, 0.172794 )
+texture = ExtResource( 10 )
+
 [node name="CrumpledClue" parent="." instance=ExtResource( 3 )]
-position = Vector2( 984, -86 )
+position = Vector2( 977, -55 )
+clue_name = "Briefcase"
+
+[node name="Briefcase" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1486, -368 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="Sprite" parent="Briefcase" index="1"]
+position = Vector2( 129, -113 )
+scale = Vector2( 0.217333, 0.217333 )
+texture = ExtResource( 9 )
+
+[node name="CrumpledClue3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2146, -1219 )
+clue_name = "MayorTimeline"
+
+[node name="MayorTimeline" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2703, -1081 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="Sprite" parent="MayorTimeline" index="1"]
+position = Vector2( 1, 0 )
+scale = Vector2( 0.199592, 0.199592 )
+texture = ExtResource( 11 )
+
+[node name="CrumpledClue4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2444, 196 )
+clue_name = "Bullet"
+
+[node name="Bullet" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4589, -259 )
+
+[node name="Sprite" parent="Bullet" index="1"]
+position = Vector2( -6, 6 )
+scale = Vector2( 0.196897, 0.196897 )
+texture = ExtResource( 15 )
+
+[node name="CrumpledClue5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4575, -406 )
+clue_name = "TrunkCompartment"
+
+[node name="TrunkCompartment" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4904, -669 )
+
+[node name="Sprite" parent="TrunkCompartment" index="1"]
+position = Vector2( 3, 2 )
+scale = Vector2( 0.178709, 0.178709 )
+texture = ExtResource( 16 )
+
+[node name="CrumpledClue6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4903, -819 )
+clue_name = "PodiumMoved"
+
+[node name="PodiumMoved" parent="." instance=ExtResource( 5 )]
+position = Vector2( 5984, 124 )
+
+[node name="Sprite" parent="PodiumMoved" index="1"]
+position = Vector2( -1.96093, -2.12817 )
+scale = Vector2( 0.180195, 0.180195 )
+texture = ExtResource( 17 )
+
+[node name="CrumpledClue7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4115, -131 )
+clue_name = "Protester"
+
+[node name="Protester" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4268, -119 )
+
+[node name="Sprite" parent="Protester" index="1"]
+position = Vector2( -0.87368, 3.2495 )
+scale = Vector2( 0.185209, 0.185209 )
+texture = ExtResource( 18 )
+
+[node name="BodyguardPortrait" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3968.86, -1440.65 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="CollisionShape2D" parent="BodyguardPortrait" index="0"]
+position = Vector2( -2, -5 )
+
+[node name="Sprite" parent="BodyguardPortrait" index="1"]
+texture = ExtResource( 13 )
+
+[node name="Sprite2" type="Sprite" parent="BodyguardPortrait"]
+position = Vector2( -0.000244141, -30.0001 )
+scale = Vector2( 0.690001, 0.74 )
+texture = ExtResource( 12 )
+
+[node name="CampaignManagerPortrait" parent="." instance=ExtResource( 14 )]
+position = Vector2( 352, -3776 )
+
+[node name="CollisionShape2D" parent="CampaignManagerPortrait" index="0"]
+position = Vector2( 0, 3 )
+
+[node name="Sprite" parent="CampaignManagerPortrait" index="1"]
+position = Vector2( 2.99997, 2 )
+scale = Vector2( 0.625, 0.625 )
+texture = ExtResource( 13 )
+
+[node name="Sprite2" type="Sprite" parent="CampaignManagerPortrait"]
+position = Vector2( -0.749996, -28.75 )
+scale = Vector2( 0.435833, 0.435833 )
+texture = ExtResource( 19 )
+
+[node name="WifePortrait" parent="." instance=ExtResource( 14 )]
+position = Vector2( 6090, -3817 )
+
+[node name="Sprite" parent="WifePortrait" index="1"]
+texture = ExtResource( 13 )
+
+[node name="Sprite2" type="Sprite" parent="WifePortrait"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 27, -149 )
 MOVE_SPEED = 500
 GRAVITY = 750
 JUMP_FORCE = 750
+
+[node name="CrumpledClue8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1298, -3427 )
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1294, -3731 )
+
+[node name="CrumpledClue9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1534, -3427 )
+
+[node name="StaticBody2D2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1526, -3723 )
+
+[node name="CrumpledClue10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1854, -3423 )
+
+[node name="StaticBody2D3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1838, -3719 )
+
+[node name="CrumpledClue11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2138, -3415 )
+
+[node name="StaticBody2D4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2138, -3707 )
+
+[node name="CrumpledClue12" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2422, -3411 )
+
+[node name="StaticBody2D5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2418, -3703 )
+
+[node name="CrumpledClue13" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2766, -3419 )
+
+[node name="StaticBody2D6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2762, -3687 )
+
+[editable path="BodyguardSpotted"]
+[editable path="Briefcase"]
+[editable path="MayorTimeline"]
+[editable path="Bullet"]
+[editable path="TrunkCompartment"]
+[editable path="PodiumMoved"]
+[editable path="Protester"]
+[editable path="BodyguardPortrait"]
+[editable path="CampaignManagerPortrait"]
+[editable path="WifePortrait"]
