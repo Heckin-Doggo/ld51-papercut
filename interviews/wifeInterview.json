@@ -55,6 +55,106 @@
     {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "All you had to do was make sure the original suitcase disappeared."},
     {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Mad", "Text": "Now you're just rambling. Maybe I should give you a knock to the head so you stop seeing double."},
     {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Suspicious", "Text": "How exactly did I make a suitcase disappear from a crime scene, then? The police searched the place thoroughly."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "The truth is, it never left."},
+    {"Type": "Choice", "Options": [
+        {"Requires": "CarCompartment", "Correct": true, "Text": "Bring up the secret car compartment."},
+        {"Requires": "RefreshmentTable", "Correct": false, "Text": "Bring up the refreshment table.", "Dialog": "default"},
+        {"Requires": "EventPhoto", "Correct": false, "Text": "Show a photo of the event.", "Dialog": "default"}
+    ]},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "You just had to drop it in the compartment in the trunk. That's what the sniper saw you doing."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "That's what makes this perfect. While you had to stop by the trunk, it was only after the mayor went onstage."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "You could stay completely clear of the briefcase in the car..."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "And still kill your husband with the briefcase in his hand."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Suspicious", "Text": "Oh yeah? And when did I give him that second briefcase then?"},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "There was only one chance..."},
+    {"Type": "Choice", "Options": [
+        {"Requires": "SuitcaseDiscrepency", "Correct": false, "Text": "Bring up the two suitcases.", "Dialog": "default"},
+        {"Requires": "ReporterPhoto", "Correct": true, "Text": "Show a picture of the mayor and wife before the speech."},
+        {"Requires": "PodiumChange", "Correct": false, "Text": "Bring up the mayor being moved at the podium.", "Dialog": "default"}
+    ]},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Show", "Text": "The reporter spotted you meeting with your husband before he hopped on the lift."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "That's when you gave him the suitcase."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "I bet you even told the bodyguard to look for the suitcase in the car so he'd leave you alone."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "The mayor had no reason to doubt you. He would have assumed it leaving the car was an honest mistake."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Default", "Text": "Okay, fine, I'll admit I had the opportunity. But how would I have gotten the suitcase in?"},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Default", "Text": "There were guards all over the place. Someone would have seen me bringing in an identical suitcase."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Worried", "Text": "And I couldn't just leave it lying around. What if someone had opened it?"},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "You didn't have to worry about that. You knew no one would find it..."},
+    {"Type": "Choice", "Options": [
+        {"Requires": "CarCompartment", "Correct": true, "Text": "Bring up the secret car compartment.", "Dialog": "default"},
+        {"Requires": "MayorTimeline", "Correct": false, "Text": "Bring up the timeline of events.", "Dialog": "default"},
+        {"Requires": "RefreshmentTable", "Correct": true, "Text": "Bring up the conveniently-placed fancy refreshment table."}
+    ]},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "You worked hard to book the best refreshments for the crew backstage. You even had a tablecloth and everything."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "That was the perfect place to hide a second briefcase."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Confused", "Text": "In the table?"},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "More precisely, on the wheels of the cart you placed the food on."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "All you had to do was carefully push it past the guard."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Then when no one was looking, you simply pulled the suitcase from below the table..."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "And handed it to the mayor, bomb still intact."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Accused", "Text": "No! No no no! This is outrageous!"},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Worried", "Text": "I would never do something like this! It's completely insane!"},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Accused", "Text": "You saw me! I was ready to support my husband. I walking up to the stage when it blew!"},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Accused", "Text": "If I knew I'd rigged a bomb to explode, I would have stayed backstage. Maybe even taken cover behind the car!"},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Accused", "Text": "There's no way I would have risked getting so close to the blast! It could have killed me!"},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "There's one thing no killer can escape, and that's random chance."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "And here is where your entire crime fell apart."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Why did the wife still approach the explosion?)"},
+    {"Type": "Choice", "Options": [
+        {"Requires": "", "Correct": false, "Text": "It was worth the risk.", "Dialog": [
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Show", "Text": "Take a look at this."},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Confused", "Text": "That's your big evidence! Ha! Pathetic!"},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Maybe I'm following the wrong lead here...)"}
+        ]},
+        {"Requires": "AssassinPlot", "Correct": true, "Text": "The bomb detonated early."},
+        {"Requires": "", "Correct": false, "Text": "She wanted to get blown up too.", "Dialog": [
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Show", "Text": "Take a look at this."},
+            {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Confused", "Text": "That's your big evidence! Ha! Pathetic!"},
+            {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Maybe I'm following the wrong lead here...)"}
+        ]}
+    ]},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "There's one thing you didn't know about. That's the campaign manager's fake assassination plan."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Right when you were heading up the stairs, there was a sniper poised aiming at the mayor."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Worried", "Text": "Dammit!"},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "The sniper didn't want to kill the mayor, but they needed a close target. They chose the briefcase."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Generally speaking, the last place you want a bullet is inside a bomb."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "But that's where the sniper's slug ended up."},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Mad", "Text": "Ugh, that stupid campaign manager!"},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "I bet you wanted the mayor to die way later, after everyone had forgotten about the speech."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Talk", "Text": "Maybe you even had a detonator. But fate has other plans."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Show", "Text": "Because of that stray bullet, your murder weapon went off on that stage, just feet from you."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "You wanted trouble, and you got it. So save me the trouble and fess up."},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Accuse", "Text": "What was it, huh? An affair after all?"},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Worried", "Text": "No! That's just tabloid garbage! I really did love him!"},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Worried", "Text": "Maybe I made mistakes from time to time, but I loved him!"},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Worried", "Text": "Maybe I got good opportunities on my plate. Maybe I loved money a little too much!"},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Worried", "Text": "Maybe I knew if he really loved me, he'd know he was worth more to me dead than alive!"},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Worried", "Text": "But I loved him! I loved him! And I still do!"},
+    {"Type": "Dialog", "View": "Suspect", "Name": "Wife", "Image": "Worried", "Text": "I'm sorry, honey! I'm sorry! Please forgive me!"},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(It seemed like the dame was always putting up acts. A good husband, a good social front, maybe a good show for the public.)"},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(But it seems her last show just wasn't quite good enough.)"},
+    {"Type": "Dialog", "View": "Detective", "Name": "Detective", "Image": "Thinking", "Text": "(Case closed.)"},
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
 
 
 
