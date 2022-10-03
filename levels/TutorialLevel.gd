@@ -61,6 +61,7 @@ func run_interview_obj(path):
 		$CanvasLayer.add_child(interviewInst)
 		
 		yield(interviewInst, "finished")  # don't do anything til interview says its done.
+		Music.change_song("Jazz")
 		yield(get_tree().create_timer(5), "timeout") # debounce of sorts?
 		interview_running = false
-		Music.change_song("Jazz")
+		

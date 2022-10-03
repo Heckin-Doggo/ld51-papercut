@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/art/interview/cork.jpg" type="Texture" id=2]
@@ -32,6 +32,8 @@
 [ext_resource path="res://assets/levelitems/corkboardpicture5.png" type="Texture" id=30]
 [ext_resource path="res://assets/levelitems/corkboardpicture6.png" type="Texture" id=31]
 [ext_resource path="res://assets/levelitems/corkboardpicture4.png" type="Texture" id=32]
+[ext_resource path="res://assets/fonts/Marker44.tres" type="DynamicFont" id=33]
+[ext_resource path="res://menu/Marker.tres" type="Theme" id=34]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 582.5, 81 )
@@ -624,7 +626,7 @@ scale = Vector2( 0.181604, 0.181604 )
 texture = ExtResource( 24 )
 
 [node name="BodyguardPortrait" parent="." instance=ExtResource( 14 )]
-position = Vector2( 3932, -1443 )
+position = Vector2( 3951, -1555 )
 character = "Bodyguard"
 
 [node name="CollisionShape2D" parent="BodyguardPortrait" index="0"]
@@ -638,6 +640,21 @@ position = Vector2( -0.000244141, -30.0001 )
 scale = Vector2( 0.690001, 0.74 )
 texture = ExtResource( 12 )
 
+[node name="Label" type="Label" parent="BodyguardPortrait"]
+margin_left = -206.0
+margin_top = 195.0
+margin_right = 199.0
+margin_bottom = 256.0
+theme = ExtResource( 34 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 33 )
+text = "Bodyguard"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_group_": true
+}
+
 [node name="CampaignManagerPortrait" parent="." instance=ExtResource( 14 )]
 position = Vector2( 412, -3756 )
 character = "CampaignManager"
@@ -650,9 +667,20 @@ position = Vector2( 2.99997, 2 )
 texture = ExtResource( 13 )
 
 [node name="Sprite2" type="Sprite" parent="CampaignManagerPortrait"]
-position = Vector2( -9, -36 )
+position = Vector2( -1, -36 )
 scale = Vector2( 0.7, 0.720458 )
 texture = ExtResource( 19 )
+
+[node name="Label" type="Label" parent="CampaignManagerPortrait"]
+margin_left = -208.0
+margin_top = 189.0
+margin_right = 209.0
+margin_bottom = 252.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 33 )
+text = "Campaign Manager"
+align = 1
+valign = 1
 
 [node name="WifePortrait" parent="." instance=ExtResource( 14 )]
 position = Vector2( 6120, -3641 )
@@ -665,6 +693,17 @@ texture = ExtResource( 13 )
 position = Vector2( -6.5, -49.4548 )
 scale = Vector2( 0.698334, 0.698334 )
 texture = ExtResource( 26 )
+
+[node name="Label" type="Label" parent="WifePortrait"]
+margin_left = -217.0
+margin_top = 172.0
+margin_right = 196.0
+margin_bottom = 244.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 33 )
+text = "MAyor's Wife"
+align = 1
+valign = 1
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 27, -149 )

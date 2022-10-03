@@ -43,8 +43,39 @@ func _ready():
 #	$Detective.visible = false
 
 func play_cutscene():
+	var dialog
+	
 	Slide.texture = load("res://assets/art/cutscene/Start1.jpg")
-	pass
-	# TODO: Fix this shit
+	dialog = dialogBox.instance()
+	dialog.dialogPath = "res://dialog/introCutscene1.json"
+	$CanvasLayer.add_child(dialog)
+	yield(dialog, "finished")
+	
+	Slide.texture = load("res://assets/art/cutscene/Start2.jpg")
+	dialog = dialogBox.instance()
+	dialog.dialogPath = "res://dialog/introCutscene2.json"
+	$CanvasLayer.add_child(dialog)
+	yield(dialog, "finished")
+	
+	Slide.texture = load("res://assets/art/cutscene/Start3.jpg")
+	dialog = dialogBox.instance()
+	dialog.dialogPath = "res://dialog/introCutscene3.json"
+	$CanvasLayer.add_child(dialog)
+	yield(dialog, "finished")
+	
+	Slide.texture = load("res://assets/art/cutscene/Start4.jpg")
+	dialog = dialogBox.instance()
+	dialog.dialogPath = "res://dialog/introCutscene4.json"
+	$CanvasLayer.add_child(dialog)
+	yield(dialog, "finished")
+	
+	Slide.texture = load("res://assets/art/cutscene/Start5.jpg")
+	dialog = dialogBox.instance()
+	dialog.dialogPath = "res://dialog/introCutscene5.json"
+	$CanvasLayer.add_child(dialog)
+	yield(dialog, "finished")
+	
+	get_tree().change_scene("res://levels/TutorialLevel.tscn")
+	
 
 
