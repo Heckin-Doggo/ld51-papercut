@@ -81,10 +81,19 @@ func run_interview_obj(path):
 		interview_running = false
 
 func onInterviewFinished(status, person):
-	match person:
-		"Bodyguard":
-			passed["Bodyguard"] = true
-		"Manager": 
-			passed["CampaignManager"] = true
-		"Wife": 
-			passed["Wife"] = true
+	if status == true:
+		match person:
+			"Bodyguard":
+				passed["Bodyguard"] = true
+			"Manager": 
+				passed["CampaignManager"] = true
+			"Wife": 
+				passed["Wife"] = true
+	check_completion()
+
+func check_completion():
+	if passed["Bodyguard"] == true and passed["CampaignManager"] == true and passed["Wife"] == true:
+		finish_game()
+
+func finish_game():
+	pass
