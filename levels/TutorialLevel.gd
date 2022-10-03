@@ -3,8 +3,9 @@ extends Node2D
 onready var camera = $EventCamera
 
 func _ready():
-	#$CrumpledClue.connect("clue_obtained", self, "activate_platform")
-	#$CrumpledClue2.connect("clue_obtained", self, "activate_platform")
+	$CrumpledClue.connect("clue_obtained", self, "activate_platform")
+	$CrumpledClue2.connect("clue_obtained", self, "activate_platform")
+	$CrumpledClue3.connect("clue_obtained", self, "activate_platform")
 	camera.connect("tween_finished", self, "reset_camera")
 
 func activate_platform(clue):
